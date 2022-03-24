@@ -1,0 +1,86 @@
+<div class="cust-img-impact-slider-main">
+  <div class="cust-img-impact-slider-inn">
+    <div class="cust-img-impact-slider-boxes">
+      
+      {% for block in section.blocks %}
+      <div class="cust-img-impact-slider-box">
+        <div class="cust-img-impact-slider-box-inn">     
+          <div class="cust-img-impact-slider-img">
+            <img class="Image--lazyLoad" src="{{ block.settings.img | img_url: 'master' }}">
+          </div>
+          <div class="cust-img-impact-slider-content">
+            <h2>{{ block.settings.title }}</h2>
+            <div class="cust-img-impact-slider-content-inner">
+              {{ block.settings.content }}
+            </div>
+            {% if block.settings.btn %}
+            <a target="_blank" {% if block.settings.url %}href="{{ block.settings.url }}"{% endif %}>{{ block.settings.btn }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Impact Slider",
+"class": "cust-img-impact-slider",
+"settings": [],
+"blocks": [
+{
+"type": "slider",
+"name": "Slider",
+"settings": [
+{
+"type": "image_picker",
+"id": "img",
+"label": "Image",
+"info": "762 * 762px required"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Her"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content",
+"default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>"
+},
+{
+"type": "text",
+"id": "btn",
+"label": "Button",
+"default": "Visit Website",
+"info": "if empty, button stays hidden"
+},
+{
+"type": "url",
+"id": "url",
+"label": "Button link"
+}
+]
+}
+]
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function(){
+    $('.cust-img-impact-slider-boxes').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true
+    });
+
+  });
+</script>

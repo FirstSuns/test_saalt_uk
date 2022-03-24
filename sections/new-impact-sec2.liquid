@@ -1,0 +1,133 @@
+<div class="new_impact_sec2_main">
+  <div class="new_impact_sec2_inn">
+
+    <div class="new_impact_sec2_title">
+      <h2>{{ section.settings.title }}</h2>      
+    </div>
+
+    <div class="new_impact2_boxes">
+      <div class="new_impact2_boxes_inn">
+
+        {% for block in section.blocks %}
+
+        <div class="new_impact2_box">
+          <div class="new_impact2_boxinner">
+            <img class="Image--lazyLoad" src="{{ block.settings.img | img_url: 'master' }}">
+            <div class="counter-icon">
+              <div class="counter-value" data-org={{ block.settings.val }} data-count="{{ block.settings.counterval }}">5000</div>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "New impact sec2",
+"class": "new_impact_sec2",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Here's what we have accomplished together"
+}
+],
+"blocks": [
+{
+"type": "box",
+"name": "Box",
+"settings": [
+{
+"type": "image_picker",
+"id": "img",
+"label": "Image",
+"info": "102px x 132px required"
+},
+{
+"type": "text",
+"id": "text",
+"label": "Text"
+},
+{
+"type": "text",
+"id": "counterval",
+"label": "Counter Val",
+"info": "add only numbers like 12987 or 1764523"
+},
+{
+"type": "text",
+"id": "val",
+"label": "Value with commas",
+"info": "add the value with commas like 12,987"
+}
+]
+}
+],
+"max_blocks": 6
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function(){
+
+    $('.new_impact2_boxes_inn').slick({
+      responsive: [
+        {
+          breakpoint: 9999,
+          settings: "unslick"
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+
+    /**************************Customized Counter Effect ********************************/  
+    var a = 0;
+    $(window).scroll(function() {
+
+      var oTop = $('.new_impact2_boxes').offset().top - window.innerHeight;
+      if (a == 0 && $(window).scrollTop() > oTop) {
+        $('.counter-value').each(function() {
+          var $this = $(this), countTo = $this.attr('data-count'), orgval = $(this).attr('data-org');
+          $({
+            countNum: $this.text()
+          }).animate({
+            countNum: countTo
+          },
+                     {
+            duration: 2000,
+            easing: 'swing',
+            step: function() {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+              $this.text(orgval);
+            }
+
+          });
+        });
+        a = 1;
+      }
+
+    });
+  });
+</script>

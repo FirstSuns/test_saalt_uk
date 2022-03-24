@@ -1,0 +1,127 @@
+{% style %}
+  #section-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+  }
+  {% if template == 'page.treefort' %} 
+    .bs-full-width-img{
+      width: 100%;
+    }
+  {% endif %}
+{% endstyle %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="brands">
+  <div class="section-inner">
+    {% if section.settings.image != blank %}
+    <div class="section-image">
+      <img class="Image--lazyLoad hidden-phone bs-full-width-img"
+        src="{{ section.settings.image | img_url: '1x1' }}"
+        data-src="{{ section.settings.image | img_url: 'master' }}"
+        alt="{{ section.settings.image.alt | escape }}">
+
+      {% if section.settings.mobile_image != blank %}
+      <img class="Image--lazyLoad hidden-tablet-and-up"
+        src="{{ section.settings.mobile_image | img_url: '1x1' }}"
+        data-src="{{ section.settings.mobile_image | img_url: 'master' }}"
+        alt="{{ section.settings.mobile_image.alt | escape }}">
+      {% else %}
+      <img class="Image--lazyLoad hidden-tablet-and-up"
+      src="{{ section.settings.image | img_url: '1x1' }}"
+      data-src="{{ section.settings.image | img_url: '256x104' }}"
+      alt="{{ section.settings.image.alt | escape }}">
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if section.settings.title != blank %}
+    <h2 class="section-title Heading">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    {% if section.settings.descr != blank %}
+    <div class="section-descr">{{ section.settings.descr }}</div>
+    {% endif %}
+
+    {% if section.blocks.size > 0 %}
+    <div class="brand-list">
+      {% for block in section.blocks %}
+      <div class="brand">
+        <img class="Image--lazyLoad hidden-phone"
+          src="{{ block.settings.image | img_url: '1x1' }}"
+          data-src="{{ block.settings.image | img_url: 'master' }}"
+          alt="{{ block.settings.image.alt | escape }}">
+
+        {% if block.settings.mobile_image != blank %}
+        <img class="Image--lazyLoad hidden-tablet-and-up"
+          src="{{ block.settings.mobile_image | img_url: '1x1' }}"
+          data-src="{{ block.settings.mobile_image | img_url: 'master' }}"
+          alt="{{ block.settings.mobile_image.alt | escape }}">
+        {% else %}
+        <img class="Image--lazyLoad hidden-tablet-and-up"
+        src="{{ block.settings.image | img_url: '1x1' }}"
+        data-src="{{ block.settings.image | img_url: '256x104' }}"
+        alt="{{ block.settings.image.alt | escape }}">
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Brands",
+    "class": "section--brands",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "descr",
+        "label": "Description"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "brand",
+        "name": "Brand",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Brands",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,64 @@
+<div class="cust-img-txt-main">
+  <div class="cust-img-txt-inn">
+
+    <div class="cust-img-txt-content-area">
+      <div class="cust-img-txt-img">
+        <img class="Image--lazyLoad" src="{{ section.settings.img1 | img_url: 'master' }}">
+      </div>
+      <div class="cust-img-txt-content">
+        <img class="Image--lazyLoad" src="{{ section.settings.img2 | img_url: 'master' }}">
+        <h2>{{ section.settings.title }}</h2>
+        {{ section.settings.content }}
+        {% if section.settings.btn %}
+        <a {% if section.settings.url %}href="{{ section.settings.url }}"{% endif %}>{{ section.settings.btn }}</a>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Custom Image Text",
+"class": "cust-img-txt",
+"settings": [
+{
+"type": "image_picker",
+"id": "img1",
+"label": "Image1",
+"info": "400 * 400px required"
+},
+{
+"type": "image_picker",
+"id": "img2",
+"label": "Image2",
+"info": "190 * 278px required"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "B is for Better"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content",
+"default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>"
+},
+{
+"type": "text",
+"id": "btn",
+"label": "Button",
+"default": "Learn More",
+"info": "button is hidden if text not provided"
+},
+{
+"type": "url",
+"id": "url",
+"label": "Button link"
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,74 @@
+{% assign blog = blogs[section.settings.featured_blog] %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="section-blogs">
+  <div class="section-inner">
+    <h2 class="section-title">{{ section.settings.title }}</h2>
+
+    {% if blog.articles_count > 0 %}
+    <div class="blog-list-wrapper">
+      <div class="sliderblog blog-list">
+        {% for article in blog.articles %}
+        {% if article.tags contains "Impact" %}
+          <div class="blog">
+            <div class="blog-inner">
+              <div class="blog-image">
+                <a href="{{ article.url }}">
+                  <img class="Image--lazyLoad" src="{{ article.image.src | img_url: 'master' }}" />
+                </a>
+              </div>
+              <div class="blog-content">
+                <a href="{{ article.url }}">
+                  <h3 class="blog-title">{{ article.title | truncatewords: 3 }}</h3>
+                </a>
+                <div class="blog-descr">{{ article.excerpt  }}</div>
+                <a href="{{ article.url }}" class="blog-btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Blogs(Question page)",
+"class": "ques_page_blogs",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title"
+},
+{
+"type": "blog",
+"id": "featured_blog",
+"label": "Featured blog"
+}
+]
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function(){
+    $('.sliderblog').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive:[
+        {
+          "breakpoint": 749,
+          "settings":{
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+</script>

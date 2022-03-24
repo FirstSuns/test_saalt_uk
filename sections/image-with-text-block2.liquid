@@ -1,0 +1,200 @@
+{% style %}
+  #section-{{ section.id }} .section-title {
+    color: {{ section.settings.title_color }};
+  }
+  #section-{{ section.id }} .section-descr {
+    color: {{ section.settings.descr_color }};
+  }
+
+  @media (max-width: 640px) {
+    #section-{{ section.id }} .section-content {
+      background-color: {{ section.settings.mobile_bg_color }};
+    }
+    #section-{{ section.id }} .section-title {
+      color: {{ section.settings.mobile_title_color }};
+    }
+    #section-{{ section.id }} .section-descr {
+      color: {{ section.settings.mobile_descr_color }};
+    }
+  }
+{% endstyle %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="image-with-text-block">
+  <div class="section-inner">
+    <div class="bg-image">
+      <img class="Image--lazyLoad hidden-phone"
+        src="{{ section.settings.desktop_image | img_url: '1x1' }}"
+        data-src="{{ section.settings.desktop_image | img_url: 'master' }}"
+        alt="{{ section.settings.desktop_image.alt | escape }}">
+
+      <img class="Image--lazyLoad hidden-tablet-and-up"
+        src="{{ section.settings.mobile_image | img_url: '1x1' }}"
+        data-src="{{ section.settings.mobile_image | img_url: 'master' }}"
+        alt="{{ section.settings.mobile_image.alt | escape }}">
+    </div>
+
+    <div class="section-content">
+      {% if section.settings.icon != blank %}
+      <div class="content-image">
+        <img class="Image--lazyLoad"
+          src="{{ section.settings.icon | img_url: '1x1' }}"
+          data-src="{{ section.settings.icon | img_url: 'master' }}"
+          alt="{{ section.settings.icon.alt | escape }}">
+      </div>
+      {% endif %}
+
+      <h2 class="section-title Heading">{{ section.settings.title }}</h2>
+      <div class="section-descr">{{ section.settings.descr }}</div>
+
+      {% if section.settings.button_1_text != blank or section.settings.button_2_text != blank %}
+      <div class="buttons-wrapper">
+        {% if section.settings.button_1_text != blank %}
+          <a href="{{ section.settings.button_1_link }}" class="btn btn-primary">{{ section.settings.button_1_text }}</a>
+        {% endif %}
+        {% if section.settings.button_2_text != blank %}
+          <a href="{{ section.settings.button_2_link }}" class="btn btn-transparent">{{ section.settings.button_2_text }}</a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if section.blocks.size > 0 %}
+      <div class="contact-list">
+        {% for block in section.blocks %}
+        <div class="contact">
+          <div class="contact-image">
+            <img class="Image--lazyLoad"
+              src="{{ block.settings.image | img_url: '1x1' }}"
+              data-src="{{ block.settings.image | img_url: 'master' }}"
+              alt="{{ block.settings.image.alt | escape }}">
+          </div>
+          <div class="contact-content">
+            <a href="{{ block.settings.contact_link }}" target="_blank">{{ block.settings.contact_text }}</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image with text block 2",
+    "class": "section--image-with-text-block",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "desktop_image",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon",
+        "label": "Icon"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "textarea",
+        "id": "descr",
+        "label": "Description"
+      },
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title Color",
+        "default": "#354759"
+      },
+      {
+        "type": "color",
+        "id": "descr_color",
+        "label": "Description Color",
+        "default": "#575E6E"
+      },
+      {
+        "type": "color",
+        "id": "mobile_title_color",
+        "label": "Mobile Title Color",
+        "default": "#354759"
+      },
+      {
+        "type": "color",
+        "id": "mobile_descr_color",
+        "label": "Mobile Description Color",
+        "default": "#575E6E"
+      },
+      {
+        "type": "color",
+        "id": "mobile_bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "header",
+        "content": "Buttons"
+      },
+      {
+        "type": "text",
+        "id": "button_1_text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "button_1_link",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "button_2_text",
+        "label": "Text"
+      },
+      {
+        "type": "url",
+        "id": "button_2_link",
+        "label": "Link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "contact",
+        "name": "Contact",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "contact_text",
+            "label": "Text"
+          },
+          {
+            "type": "text",
+            "id": "contact_link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Image with text block 2",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}

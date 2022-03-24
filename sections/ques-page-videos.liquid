@@ -1,0 +1,123 @@
+<div class="ques-page-video-sec-container">
+  <div class="ques-page-video-sec-inn">
+    <div class="ques-page-video-sec-content-area">
+      <div class="ques-page-video-sec-header">
+        <h2>{{ section.settings.title }}</h2>
+        <p>{{ section.settings.content }}</p>
+      </div>
+
+      <div class="ques-page-video-container">
+        {% for block in section.blocks %}
+        <div class="ques-page-Mainvideo-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ block.settings.video.id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        {% break %}
+        {% endfor %}
+
+        <div class="ques-page-thumbs_video-container">
+          {% for block in section.blocks %}
+          <div class="ques-page-thumbs_video">
+            <img class="Image--lazyLoad {% if forloop.first %}active_video{% endif %}" src="{{ block.settings.poster_img | img_url: 'master' }}" cst_url="https://www.youtube.com/embed/{{ block.settings.video.id }}">
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+
+      {% if section.settings.btn != blank %}
+      <div class="ques-video-btn">
+        <a {% if section.settings.link != blank %}href="{{ section.settings.link }}"{% endif %}>{{ section.settings.btn }}</a>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Ques-Page Videos",
+"class": "custm_ques_page_videos_sec",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Headline goes here"
+},
+{
+"type": "text",
+"id": "content",
+"label": "Content",
+"default": "Lorem ipsum mixtape sugar happiness bunny longshot go for it"
+},
+{
+"type": "text",
+"id": "btn",
+"label": "Button",
+"default": "See More",
+"info": "if empty, button wont show"
+},
+{
+"type": "url",
+"id": "link",
+"label": "Button Link"
+}
+],
+"blocks": [
+{
+"type": "video",
+"name": "Video",
+"settings": [
+{
+"type": "image_picker",
+"id": "poster_img",
+"label": "Poster Image",
+"info": "Recommended Size 262x148"
+},
+{
+"type": "video_url",
+"id": "video",
+"label": "Video",
+"accept": ["youtube"] 
+}
+]
+}
+]
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function(){
+    $('.ques-page-thumbs_video > img').click(function(){
+      $('.ques-page-thumbs_video img').removeClass('active_video');
+      $(this).addClass('active_video');
+      var url = $(this).attr('cst_url');
+      $('.ques-page-Mainvideo-container > iframe').attr('src',url);
+    });
+    
+    {% unless template == 'page.impact-new' %}
+
+    $('.ques-page-thumbs_video-container').slick({
+      responsive:[
+        {
+          "breakpoint": 9999,
+          "settings": "unslick"
+        },
+        {
+          "breakpoint": 749,
+          "settings":{
+            slidesToShow: 1,
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToScroll: 1,
+            arrows: true,
+          }
+        }
+      ]
+    });
+    
+    {% endunless %}
+  });
+</script>

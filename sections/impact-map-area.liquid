@@ -1,0 +1,36 @@
+<div class="impact-map-sec-main">
+  <div class="impact-map-sec-inn">
+
+    <div class="impact-map-sec-title">
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+
+    <div class="impact-map-area">
+      <div id="map"></div>
+      <div class="marker mapboxgl-marker mapboxgl-marker-anchor-center">
+        {% comment %} <span class="cup-animated"></span> {% endcomment %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="{{ 'map.js' | asset_url }}"></script>
+<!-- <script src="https://apps.saaltco.com/apps/impact-map/app.js"></script> -->
+
+{% schema %}
+{
+"name": "Impact Map",
+"class": "impact-map-sec",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Where We Work"
+}
+]
+}
+{% endschema %}

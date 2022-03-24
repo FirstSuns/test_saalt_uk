@@ -1,0 +1,109 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+{{ 'section-blogs.css' | asset_url | stylesheet_tag }}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="section-blogs">
+  <div class="section-inner">
+    <h2 class="section-title">{{ section.settings.title }}</h2>
+
+    {% if section.blocks.size > 0 %}
+    <div class="blog-list-wrapper">
+      <div class="blog-list">
+        {% for block in section.blocks %}
+        <div class="blog">
+          <div class="blog-inner">
+            <div class="blog-image">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+            </div>
+            <div class="blog-content">
+              <h3 class="blog-title">{{ block.settings.title }}</h3>
+              <div class="blog-descr">{{ block.settings.descr }}</div>
+              <a href="{{ block.settings.btn_url }}" class="blog-btn">{{ block.settings.btn_text }}</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="blog-list-arrows">
+        <li class="prev"><img src="https://cdn.shopify.com/s/files/1/2705/9430/files/pev_2x_bbccc4f4-be39-4c19-8864-b34f7a92821a.png?v=1631707702" alt=""></li>
+        <li class="next"><img src="https://cdn.shopify.com/s/files/1/2705/9430/files/next_2x_4322ce7c-83d4-4e4e-a348-63933e0690cb.png?v=1631707702" alt=""></li>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  $('#section-{{ section.id }} .blog-list').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: true,
+    prevArrow: $('#section-{{ section.id }} .blog-list-arrows .prev'),
+    nextArrow: $('#section-{{ section.id }} .blog-list-arrows .next'),
+    responsive: [
+      {
+        breakpoint: 374,
+        settings: {
+          variableWidth: true
+        }
+      }
+    ]
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Blogs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "descr",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "btn_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "btn_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blogs"
+    }
+  ]
+}
+{% endschema %}

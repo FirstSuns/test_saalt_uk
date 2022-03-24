@@ -1,0 +1,151 @@
+
+.section-find-fit .section-inner {
+  padding: 80px 15px;
+  background-image: url('https://cdn.shopify.com/s/files/1/2705/9430/files/bg_1.png?v=1631880293');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.section-find-fit .top-image {
+  display: inline-flex;
+  width: 60px;
+}
+.section-find-fit .section-title {
+  color: #3F4759;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 37px !important;
+  margin-bottom: 0;
+}
+.section-find-fit .section-descr {
+  color: #3F4759;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+  max-width: 720px;
+  margin: 24px auto 0;
+}
+.section-find-fit .saalt-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.section-find-fit .saalt {
+  max-width: 290px;
+  margin-left: 35px;
+}
+.section-find-fit .saalt:first-child {
+  margin-left: 0;
+}
+.section-find-fit .saalt-image {
+  display: inline-flex;
+  width: 234px;
+}
+.section-find-fit .saalt-title {
+  color: #3F4759 !important;
+  font-size: 22px !important;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 27px;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+.section-find-fit .saalt-descr {
+  color: #3F4759;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 27px;
+  margin-top: 14px;
+}
+.section-find-fit .section-button-wrapper {
+  margin-top: 55px;
+}
+.section-find-fit .section-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 16px;
+  background-color: #3F4759;
+  text-transform: uppercase;
+  border-radius: 136px;
+}
+
+@media (min-width: 1441px) {
+  .section-find-fit .saalt {
+    max-width: 320px;
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .section-find-fit .section-inner {
+    background-image: unset;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-find-fit .saalt {
+    max-width: 260px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-find-fit .section-inner {
+    padding: 40px 15px;
+    text-align: center;
+  }
+  .section-find-fit .section-title {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+  .section-find-fit .section-descr {
+    font-size: 16px;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+  .section-find-fit .saalt-list {
+    margin-right: -15px;
+  }
+  .section-find-fit .saalt {
+    max-width: 250px;
+    margin-left: 20px;
+  }
+  .section-find-fit .saalt-title {
+    margin-top: 20px;
+  }
+  .section-find-fit .saalt-descr {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .section-find-fit .slick-dots {
+    bottom: -35px;
+    padding-right: 20px;
+  }
+  .section-find-fit .slick-dots li button:before {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 549px) {
+  .section-find-fit .section-descr {
+    font-size: 15px;
+    line-height: 23px;
+    margin-top: 14px;
+  }
+  .section-find-fit .saalt {
+    max-width: 234px;
+    margin-left: 14px;
+  }
+  .section-find-fit .saalt-descr {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-585TK2T');</script>
+<!-- End Google Tag Manager -->
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+
+  {% render 'shogun-head' %}
+<script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+    heap.load("4152763188");
+    var customerEmail = '{{ customer.email }}' || '{{ checkout.email }}';
+    heap.identify(customerEmail);
+    heap.addUserProperties({'Name': '{{ customer.name }}','email': customerEmail,'CustomerID':'{{ customer.id }}','TotalSpent':'{{ customer.total_spent }}'});   
+{% if first_time_accessed %}
+    // heap.track('Purchase', {'Total Price': '{{ checkout.total_price | money }}','Order Email': '{{ customer.email }}','Order ID': '{{ checkout.id }}','Order Name': '{{ checkout.order_name }}','Discount': '{{ checkout.discount_code }}','Discount Amount': '{{ checkout.discounts_amount | money }}','Order Count': '{{ customer.orders_count }}','Tags': '{{ customer.tags }}','Shipping Method': '{{ checkout.shipping_method.title }}','Shipping Address': '{{ checkout.shipping_address }}'});
+{% endif %}
+    </script>
+</head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-585TK2T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+
+    {{ tracking_code }}
+   
+  </body>
+</html>
+<script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/1ob5zLVl0tGNVDAihObqpQ" async></script>
+<div class="yotpo-widget-instance" data-yotpo-instance-id="34446"></div>
+ <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=V3jht7&module=CONSENT_AT_CHECKOUT"></script>

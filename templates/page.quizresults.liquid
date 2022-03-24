@@ -1,0 +1,118 @@
+{% render 'shogun-products', content: page %}
+
+{{ page.content }}
+
+
+{%- assign size_chart_page_cups = pages['size-chart-cups'] -%}
+<div id="modal-{{ size_chart_page_cups.handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- size_chart_page_cups.content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+
+{%- assign color_page_cups = pages['colors-cups'] -%}
+<div id="modal-{{ color_page_cups.handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- color_page_cups.content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+
+{%- assign size_chart_page_wear = pages['size-chart-wear'] -%}
+<div id="modal-{{ size_chart_page_wear.handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- size_chart_page_wear.content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+{%- assign color_page_wear = pages['colors-wear'] -%}
+<div id="modal-{{ color_page_wear.handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- color_page_wear.content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+<div id="modal-{{ pages['bikini-saalt-wear-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['bikini-saalt-wear-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+<div id="modal-{{ pages['mesh-hipster-saalt-wear-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['mesh-hipster-saalt-wear-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+<div id="modal-{{ pages['thong-saalt-wear-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['thong-saalt-wear-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+<div id="modal-{{ pages['lace-hipster-saalt-wear-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['lace-hipster-saalt-wear-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+<div id="modal-{{ pages['high-waist-saalt-wear-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['high-waist-saalt-wear-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+<div id="modal-{{ pages['saalt-cup-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['saalt-cup-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+
+<div id="modal-{{ pages['saalt-soft-cup-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['saalt-soft-cup-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+
+<div id="modal-{{ pages['saalt-teen-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['saalt-teen-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>
+
+<div id="modal-{{ pages['saalt-twin-pack-colors'].handle }}" class="Modal Modal--dark Modal--fullScreen Modal--pageContent" aria-hidden="true" role="dialog" data-scrollable>
+  <div class="Modal__Content Rte">
+    <div class="Container Container--extraNarrow">
+      {{- pages['saalt-twin-pack-colors'].content -}}
+    </div>
+  </div>
+  <button class="Modal__Close RoundButton RoundButton--large" data-animate-bottom data-action="close-modal">X</button>
+</div>

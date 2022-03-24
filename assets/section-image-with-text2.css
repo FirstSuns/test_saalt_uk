@@ -1,0 +1,111 @@
+
+.section-image-with-text2 .section-inner {
+  display: flex;
+  padding: 68px 84px;
+}
+.section-image-with-text2 .section-image {
+  max-width: 490px;
+}
+.section-image-with-text2 .section-content {
+  padding-left: 170px;
+  display: flex;
+  align-items: center;
+}
+.section-image-with-text2 .section-content-inner {
+  max-width: 530px;
+}
+.section-image-with-text2 .section-title {
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 37px !important;
+  margin-bottom: 24px;
+}
+.section-image-with-text2 .section-descr {
+  color: #FFFFFF;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+.section-image-with-text2 .section-button-wrapper {
+  margin-top: 32px;
+}
+.section-image-with-text2 .section-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  color: #5A5F6F;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 16px;
+  background-color: #fff;
+  text-transform: uppercase;
+  border-radius: 136px;
+}
+
+@media (min-width: 1500px) {
+  .section-image-with-text2 .section-image {
+    max-width: 550px;
+  }
+  .section-image-with-text2 .section-content-inner {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .section-image-with-text2 .section-content {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section-image-with-text2 .section-inner {
+    padding: 50px;
+  }
+  .section-image-with-text2 .section-image {
+    max-width: 450px;
+  }
+  .section-image-with-text2 .section-content {
+    padding-left: 70px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .section-image-with-text2 .section-inner {
+    padding: 40px;
+  }
+  .section-image-with-text2 .section-image {
+    max-width: 400px;
+  }
+  .section-image-with-text2 .section-content {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-image-with-text2 .section-image {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-image-with-text2 .section-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 37px 20px;
+  }
+  .section-image-with-text2 .section-content {
+    padding: 30px 0px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 549px) {
+  .section-image-with-text2 .section-image {
+    max-width: 300px;
+  }
+}

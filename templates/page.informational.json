@@ -1,0 +1,301 @@
+{
+  "sections": {
+    "banner": {
+      "type": "section-banner",
+      "blocks": {
+        "d0f129d9-ba4b-4a90-af8a-58100ded04f3": {
+          "type": "text",
+          "settings": {
+            "text": "Find Your Fit"
+          }
+        },
+        "5e2d38e9-014e-4944-9da3-b01ecd399244": {
+          "type": "text",
+          "settings": {
+            "text": "How To Choose"
+          }
+        },
+        "60a0cd36-bef8-4f59-8b91-358b8161cef9": {
+          "type": "text",
+          "settings": {
+            "text": "Common Questions"
+          }
+        }
+      },
+      "block_order": [
+        "d0f129d9-ba4b-4a90-af8a-58100ded04f3",
+        "5e2d38e9-014e-4944-9da3-b01ecd399244",
+        "60a0cd36-bef8-4f59-8b91-358b8161cef9"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hero_img_2x_4f26553d-2f49-4bd8-af02-c7ffa5864abd.png",
+        "title": "Period Cup Fit\nWhat You Need to Know?",
+        "title_color": "#FFF",
+        "text_color": "#FFF",
+        "bg_color": "#5A5F6F"
+      }
+    },
+    "find-fit": {
+      "type": "section-find-fit",
+      "blocks": {
+        "0c193ff2-6565-4cbc-b1f2-7d8b99a9c49a": {
+          "type": "saalt",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_teen_2x_a89bd45d-52d1-40e9-9830-ffd4f0321668.png",
+            "title": "Saalt Teen",
+            "descr": "Light to normal flow (1-2 tampons)\nUnder 18 years or petite physique\nLow cervix *see how-to here"
+          }
+        },
+        "3ab9be3b-ca8b-4619-8c58-6b5a152ad6f0": {
+          "type": "saalt",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_regular_2x_765fd2d0-d088-446f-a7f3-9fda332552e7.png",
+            "title": "Saalt Regular",
+            "descr": "Normal to heavy flow (3–4 tampons)\nHigh-capacity\nHigh cervix *see how-to here"
+          }
+        },
+        "0ecaceed-e423-4d59-8a46-75af4615ed45": {
+          "type": "saalt",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/img_small_2x_328d80a2-ac79-4d5d-830a-0fdeae407fbe.png",
+            "title": "Saalt Small",
+            "descr": "Light to normal flow (2–3 tampons)\nFirst-time user and 18 years or older\nLow cervix *see how-to here"
+          }
+        }
+      },
+      "block_order": [
+        "0c193ff2-6565-4cbc-b1f2-7d8b99a9c49a",
+        "3ab9be3b-ca8b-4619-8c58-6b5a152ad6f0",
+        "0ecaceed-e423-4d59-8a46-75af4615ed45"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Cup-svg.png",
+        "title": "Find your perfect fit",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "btn_text": "Shop Saalt Cups",
+        "btn_url": "shopify:\/\/collections\/cups"
+      }
+    },
+    "quiz": {
+      "type": "section-quiz",
+      "settings": {
+        "title": "Not sure which cup to get?",
+        "descr": "Take our Cup Quiz, it helps take out the guesswork.",
+        "quiz_html": "<link href=\"https:\/\/apps.saalt.com\/css\/app.css\" rel=\"stylesheet\">\n<script>\n  window.quizURL = \"https:\/\/apps.saalt.com\/quiz_data.json\";\n<\/script>\n<div id=\"app\"><\/div>\n<script src=\"https:\/\/apps.saalt.com\/js\/chunk-vendors.js\"><\/script>\n<script src=\"https:\/\/apps.saalt.com\/js\/app.js\"><\/script>"
+      }
+    },
+    "video": {
+      "type": "section-video",
+      "settings": {
+        "title": "How do I choose the right size?",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporю",
+        "btn_text": "See more",
+        "btn_url": "",
+        "bg_color": "#3F4759"
+      }
+    },
+    "text": {
+      "type": "section-text",
+      "settings": {
+        "title": "Lorem ipsum dolor",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.",
+        "btn_text": "Shop saalt Cups",
+        "btn_url": "shopify:\/\/collections\/cups",
+        "bg_color": "#FDF6EE"
+      }
+    },
+    "image_with_text": {
+      "type": "section-image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/img_2x_8b406674-7240-4896-9ba5-dca82c2472a6.jpg",
+        "title": "Headline Here",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ."
+      }
+    },
+    "question": {
+      "type": "section-question",
+      "settings": {
+        "question_title": "Q.",
+        "question_descr": "Lorem ipsum dolor sit",
+        "q_bg_color": "#F7D6C5",
+        "testimonial_image": "shopify:\/\/shop_images\/QuoteMark-svg.png",
+        "testimonial_descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim .",
+        "t_bg_color": "#FDF7F3"
+      }
+    },
+    "introduction": {
+      "type": "section-introduction",
+      "blocks": {
+        "223f447e-0d6f-4e58-afc3-c9ae975fa3ef": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Chat-svg.png",
+            "title": "live Chat",
+            "link": "https:\/\/v2.zopim.com\/widget\/popout.html?key=DibbXUebfGYfJpmOpguVy6hmJcM7vDqc"
+          }
+        },
+        "22100b41-cbff-4ce5-8717-6779672287f3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Text-svg.png",
+            "title": "Text Us",
+            "link": "sms:\/\/+18552158426"
+          }
+        },
+        "bba5b8be-5013-4414-9805-8a87ed4973d7": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Email-svg.png",
+            "title": "Email US",
+            "link": "mailto:sayhey@saalt.com"
+          }
+        }
+      },
+      "block_order": [
+        "223f447e-0d6f-4e58-afc3-c9ae975fa3ef",
+        "22100b41-cbff-4ce5-8717-6779672287f3",
+        "bba5b8be-5013-4414-9805-8a87ed4973d7"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Monogram-svg.png",
+        "title": "We're here to get you to period bliss.",
+        "description": "If you're not happy with your Saalt product, we'll send you a replacement you'll love or your money back per our Period Bliss Guarantee.",
+        "subtitle": "Reach out to our Saalt Gurus"
+      }
+    },
+    "testimonials": {
+      "type": "section-testimonials",
+      "blocks": {
+        "3538dc1a-dcd5-40d3-8517-797ce071e7a3": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "This is the first cup I've ever used and I LOVE it! Literally cannot feel it at all when inserted. And the underwear is so comfortable, much more so than disposable pads. I was skeptical but they are some sort of sorcery because they stay dry! I'm telling anyone who will listen to give these products a try.",
+            "author": "Kelsey R."
+          }
+        },
+        "3d42d948-6027-4675-9a9c-e96c5bc635e8": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "This is the first cup I've ever used and I LOVE it! Literally cannot feel it at all when inserted. And the underwear is so comfortable, much more so than disposable pads. I was skeptical but they are some sort of sorcery because they stay dry! I'm telling anyone who will listen to give these products a try.",
+            "author": "Kelsey R."
+          }
+        },
+        "2892eb79-9d21-4307-9b15-b8b0f2fccbeb": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "This is the first cup I've ever used and I LOVE it! Literally cannot feel it at all when inserted. And the underwear is so comfortable, much more so than disposable pads. I was skeptical but they are some sort of sorcery because they stay dry! I'm telling anyone who will listen to give these products a try.",
+            "author": "Kelsey R."
+          }
+        }
+      },
+      "block_order": [
+        "3538dc1a-dcd5-40d3-8517-797ce071e7a3",
+        "3d42d948-6027-4675-9a9c-e96c5bc635e8",
+        "2892eb79-9d21-4307-9b15-b8b0f2fccbeb"
+      ],
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg_2x_23be4269-052a-4f65-97ff-349678040779.png",
+        "top_image": "shopify:\/\/shop_images\/QuoteMark-svg.png"
+      }
+    },
+    "faq": {
+      "type": "section-faq",
+      "blocks": {
+        "6d350742-8100-48ce-bf11-7f9262bd1858": {
+          "type": "faq",
+          "settings": {
+            "question": "Do period cups hurt?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          }
+        },
+        "a1b5784c-2bd1-4d32-8f72-27de22c0dfc8": {
+          "type": "faq",
+          "settings": {
+            "question": "Lorem ipsum dolor sit amet,",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          }
+        },
+        "994f97c3-8401-4329-b018-96295e582c9c": {
+          "type": "faq",
+          "settings": {
+            "question": "Lorem ipsum dolor sit amet,",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          }
+        },
+        "88ac3962-3410-4ccd-adf6-3996a4d72bcd": {
+          "type": "faq",
+          "settings": {
+            "question": "Lorem ipsum dolor sit amet,",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          }
+        }
+      },
+      "block_order": [
+        "6d350742-8100-48ce-bf11-7f9262bd1858",
+        "a1b5784c-2bd1-4d32-8f72-27de22c0dfc8",
+        "994f97c3-8401-4329-b018-96295e582c9c",
+        "88ac3962-3410-4ccd-adf6-3996a4d72bcd"
+      ],
+      "settings": {
+        "title": "The fit questions we hear most",
+        "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporю"
+      }
+    },
+    "blogs": {
+      "type": "section-blogs",
+      "blocks": {
+        "fa8c859a-6aac-42cd-a90d-86d216b58313": {
+          "type": "blog",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy_2x_83875238-bcd8-4b5c-9178-3ea6fdc4a1ad.jpg",
+            "title": "6 helpful cup cleaning tips",
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "btn_text": "Read more",
+            "btn_url": ""
+          }
+        },
+        "617c5585-7236-454e-9ea3-e3da23136969": {
+          "type": "blog",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy_2x_83875238-bcd8-4b5c-9178-3ea6fdc4a1ad.jpg",
+            "title": "6 helpful cup cleaning tips",
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "btn_text": "Read more",
+            "btn_url": ""
+          }
+        },
+        "be447057-d2af-427b-9c57-57369c5506de": {
+          "type": "blog",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dummy_2x_83875238-bcd8-4b5c-9178-3ea6fdc4a1ad.jpg",
+            "title": "6 helpful cup cleaning tips",
+            "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "btn_text": "Read more",
+            "btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "fa8c859a-6aac-42cd-a90d-86d216b58313",
+        "617c5585-7236-454e-9ea3-e3da23136969",
+        "be447057-d2af-427b-9c57-57369c5506de"
+      ],
+      "settings": {
+        "title": "From the blog"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "find-fit",
+    "quiz",
+    "video",
+    "text",
+    "image_with_text",
+    "question",
+    "introduction",
+    "testimonials",
+    "faq",
+    "blogs"
+  ]
+}

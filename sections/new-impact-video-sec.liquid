@@ -1,0 +1,48 @@
+<div class="new_impact_video_main">
+  <div class="new_impact_video_inn">
+    
+    <div class="new_impact_video_bg">
+      <video class="video_sec" autoplay muted loop poster="{{ section.settings.img | img_url: 'master' }}"  playsinline style="pointer-events: none;">
+        <source src="{{ section.settings.video }}">
+      </video>
+    </div>
+    
+    <div class="new_impact_video_content">
+      <h2>{{ section.settings.title }}</h2>
+      {{ section.settings.content }}
+    </div>
+    
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "New impact video",
+"class": "new_impact_video",
+"settings": [
+{
+"type": "image_picker",
+"id": "img",
+"label": "Poster image"
+},
+{
+"type": "url",
+"id": "video",
+"label": "Video",
+"info": "supports only mp4 type"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Saalt gives 2%"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content",
+"default": "<p>When you choose Saalt, you're providing life-changing and planet-saving period care to those who need it most.</p>"
+}
+]
+}
+{% endschema %}

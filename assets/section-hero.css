@@ -1,0 +1,111 @@
+
+.section-hero .section-inner {
+  position: relative;
+}
+.section-hero .section-image {
+  height: 600px;
+}
+.section-hero .section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-hero .section-content {
+  position: absolute;
+  max-width: 780px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 60px;
+  text-align: center;
+  padding: 0px 20px;
+}
+.section-hero .section-title {
+  color: #FFFFFF;
+  font-size: 48px !important;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 58px !important;
+  margin-bottom: 24px;
+}
+.section-hero .section-title.title-mobile {
+  display: none;
+}
+.section-hero .section-descr {
+  color: #FFFFFF;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+.section-hero .section-button-wrapper {
+  margin-top: 24px;
+}
+.section-hero .section-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 16px;
+  background-color: #3F4759;
+  text-transform: uppercase;
+  border-radius: 136px;
+}
+
+@media (max-width: 1023px) {
+  .section-hero .section-image {
+    height: 500px;
+  }
+  .section-hero .section-title {
+    font-size: 40px !important;
+    line-height: 52px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-hero .section-image {
+    height: 400px;
+    position: relative;
+  }
+  .section-hero .section-content {
+    position: relative;
+    left: unset;
+    transform: unset;
+    bottom: unset;
+    padding: 30px 20px 40px;
+  }
+  .section-hero .section-title {
+    font-size: 32px !important;
+    line-height: 49px !important;
+  }
+  .section-hero .section-title.title-desktop {
+    display: none;
+  }
+  .section-hero .section-title.title-mobile {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .section-hero .section-descr {
+    font-size: 16px;
+    line-height: 25px;
+    color: #3F4759;
+  }
+}
+
+@media (max-width: 549px) {
+  .section-hero .section-title.title-mobile {
+    margin-bottom: 0;
+  }
+  .section-hero .section-descr {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}

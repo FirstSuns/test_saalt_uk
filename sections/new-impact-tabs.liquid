@@ -1,0 +1,193 @@
+<div class="new-impact-tabs-sec-main">
+  <div class="new-impact-tabs-sec-inn">
+    <div class="new-impact-tabs-sec-header">
+      <div class="new-impact-tabs-sec-cust-bg-heading">
+        <h2>{{ section.settings.title1 }}</h2>
+      </div>
+
+      <div class="new-impact-tabs-sec-title">
+        <h2>{{ section.settings.title2 }}</h2>
+      </div>
+
+      <div class="new-impact-tabs">
+        <ul class="impact-tab">
+          <li class="activetab">
+            <a>
+              <img data-atr="1" class="tab-image Image--lazyLoad" src="{{ section.settings.tab1 | img_url: 'master' }}">
+            </a>
+          </li>
+          <li>
+            <a>
+              <img data-atr="2" class="tab-image Image--lazyLoad" src="{{ section.settings.tab2 | img_url: 'master' }}">
+            </a>
+          </li>
+          <li>
+            <a>
+              <img data-atr="3" class="tab-image Image--lazyLoad" src="{{ section.settings.tab3 | img_url: 'master' }}">
+            </a>
+          </li>
+        </ul>
+
+        <div class="tabcontent" atr-d="1" id="tab1">
+          <div class="new-impact-tab-content">
+            <div class="new-impact-tab-content-left">
+              <img class="Image--lazyLoad" src="{{ section.settings.img1 | img_url: 'master' }}">
+            </div>
+            <div class="new-impact-tab-content-right">
+              <h2>{{ section.settings.tab1_title }}</h2>
+              {{ section.settings.tab1_content }}
+            </div>
+          </div>
+        </div>
+        <div class="tabcontent" atr-d="2" id="tab2" style="display:none;">
+          <div class="new-impact-tab-content">
+            <div class="new-impact-tab-content-left">
+              <img class="Image--lazyLoad" src="{{ section.settings.img2 | img_url: 'master' }}">
+            </div>
+            <div class="new-impact-tab-content-right">
+              <h2>{{ section.settings.tab2_title }}</h2>
+              {{ section.settings.tab2_content }}
+            </div>
+          </div>
+        </div>
+        <div class="tabcontent" atr-d="3" id="tab3" style="display:none;">
+          <div class="new-impact-tab-content">
+            <div class="new-impact-tab-content-left">
+              <img class="Image--lazyLoad" src="{{ section.settings.img3 | img_url: 'master' }}">
+            </div>
+            <div class="new-impact-tab-content-right">
+              <h2>{{ section.settings.tab3_title }}</h2>
+              {{ section.settings.tab3_content }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "New impact tabs",
+"class": "new-impact-tabs-sec",
+"settings": [
+{
+"type": "text",
+"id": "title1",
+"label": "Title1",
+"default": "How Saalt is helping"
+},
+{
+"type": "text",
+"id": "title2",
+"label": "Title2",
+"default": "Our Impact Pillars"
+},
+{
+"type": "header",
+"content": "Tab Headings"
+},
+{
+"type": "image_picker",
+"id": "tab1",
+"label": "Tab1",
+"info": "547 * 342px required"
+},
+{
+"type": "image_picker",
+"id": "tab2",
+"label": "Tab2",
+"info": "547 * 342px required"
+},
+{
+"type": "image_picker",
+"id": "tab3",
+"label": "Tab3",
+"info": "547 * 342px required"
+},
+{
+"type": "header",
+"content": "Tab Content"
+},
+{
+"type": "image_picker",
+"id": "img1",
+"label": "Image1",
+"info": "1148 * 1156px required"
+},
+{
+"type": "text",
+"id": "tab1_title",
+"label": "Tab1 title",
+"default": "Menstrual Health"
+},
+{
+"type": "html",
+"id": "tab1_content",
+"label": "Tab1 content",
+"default": "<p>Everyone should have the right to a safe and dignified period. We empower individuals with the knowledge and long-term solutions to improve their menstrual health, which increases gender equality and opens conversations that bring awareness and break down social stigmas.</p><span>· Globally, more than 2.3 billion people lack basic sanitation services, such as clean water and soap in bathrooms.</span>"
+},
+{
+"type": "image_picker",
+"id": "img2",
+"label": "Image2",
+"info": "1148 * 1156px required"
+},
+{
+"type": "text",
+"id": "tab2_title",
+"label": "Tab2 title",
+"default": "Education & Empowerment"
+},
+{
+"type": "html",
+"id": "tab2_content",
+"label": "Tab2 content",
+"default": "<p>Everyone should have the right to a safe and dignified period. We empower individuals with the knowledge and long-term solutions to improve their menstrual health, which increases gender equality and opens conversations that bring awareness and break down social stigmas.</p><span>96.8% of school-aged girls in Ghana felt 'more confident' while using clean period products during their period and 98.4% felt better able to concentrate at school.</span>"
+},
+{
+"type": "image_picker",
+"id": "img3",
+"label": "Image3",
+"info": "1148 * 1156px required"
+},
+{
+"type": "text",
+"id": "tab3_title",
+"label": "Tab3 title",
+"default": "Sustainability"
+},
+{
+"type": "html",
+"id": "tab3_content",
+"label": "Tab3 content",
+"default": "<p>Everyone should have the right to a safe and dignified period. We empower individuals with the knowledge and long-term solutions to improve their menstrual health, which increases gender equality and opens conversations that bring awareness and break down social stigmas.</p><span>It takes a tampon longer to degrade than the lifespan of the person who wears it!</span><span>One Saalt Cup diverts 3000 tampons or pads from landfills and our oceans.</span>"
+}
+]
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function(){
+    //     $(".new-impact-tabs").tabs();
+
+    $('.tab-image').on('click',function(){
+      var uniqueId = $(this).attr('data-atr');
+      $('.new-impact-tabs > ul > li').removeClass('activetab');
+      $(this).parent('a').parent('li').addClass('activetab');
+
+      $('.tabcontent').each(function(){
+        $(this).hide();
+        var uid = $(this).attr('atr-d');
+        if(uniqueId == uid){
+          $(this).show();
+        }
+        if(uniqueId != uid){
+          $(this).hide();
+        }
+
+      });
+    });
+  });
+</script>

@@ -1,0 +1,135 @@
+<div class="new-impact-slider-main">
+  <div class="new-impact-slider-inn">
+    <div class="new-impact-slider-content-area">
+
+      <div class="new-impact-slider-content-inn">
+
+        <div class="new-impact-slider-Mainblock">
+          <div class="new-impact-slider-fixedbox">
+            <img class="Image--lazyLoad" src="{{ section.settings.img | img_url: 'master' }}">
+            <div class="cst-caption-on">
+              <div class="new-impact-slider-icon">
+                {{ section.settings.svgicon }}
+              </div>
+              <h4>{{ section.settings.h4 }}</h4>
+              {{ section.setttings.content }}            
+            </div>
+          </div>
+
+          <div class="new-impact-slider-boxArea">
+
+            {% for block in section.blocks %}
+            <div class="new-impact-slider-box">
+              <img class="Image--lazyLoad" src="{{ block.settings.img | img_url: 'master' }}">
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.text }}</p>
+            </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "New impact slider",
+"class": "new-impact-slider",
+"settings": [
+{
+"type": "image_picker",
+"id": "img",
+"label": "Image",
+"info": "2100px x 1600 px required"
+},
+{
+"type": "html",
+"id": "svgicon",
+"label": "SVG Icon"
+},
+{
+"type": "text",
+"id": "h4",
+"label": "Heading",
+"default": "You started your period today, but you don't have period care. Would you go to work or school?"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content",
+"default": "<p>500 million women and girls around the world have to make this decision every month.</p>"
+}
+],
+"blocks": [
+{
+"name": "Slider",
+"type": "slider",
+"settings": [
+{
+"type": "image_picker",
+"id": "img",
+"label": "Image",
+"info": "397 * 397px"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "1 in 5"
+},
+{
+"type": "text",
+"id": "text",
+"label": "Text",
+"default": "1 in 5 menstruators in the United States are unable to afford period care products every month."
+}
+]
+}
+]
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function(){
+    $('.new-impact-slider-boxArea').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+
+  });
+</script>

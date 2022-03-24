@@ -1,0 +1,130 @@
+{% style %}
+  #section-{{ section.id }} {
+    position: relative;
+  }
+{% endstyle %}
+
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "wrapAround": true,
+  "dragThreshold": 16,
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %},
+  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %}
+}
+{%- endcapture -%}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="testimonials">
+  <div class="background-image">
+    <img class="Image--lazyLoad hidden-phone"
+      src="{{ section.settings.background | img_url: '1x1' }}"
+      data-src="{{ section.settings.background | img_url: 'master' }}"
+      alt="{{ section.settings.background.alt | escape }}">
+    <img class="Image--lazyLoad hidden-tablet-and-up"
+      src="{{ section.settings.background | img_url: '1x1' }}"
+      data-src="{{ section.settings.mobile_background | img_url: 'master' }}"
+      alt="{{ section.settings.background.alt | escape }}">
+  </div>
+
+  <div class="section-inner">
+    <div class="quote-image">
+      <img class="Image--lazyLoad hidden-phone"
+        src="{{ section.settings.quote_image | img_url: '1x1' }}"
+        data-src="{{ section.settings.quote_image | img_url: 'master' }}"
+        alt="{{ section.settings.quote_image.alt | escape }}">
+      <img class="Image--lazyLoad hidden-tablet-and-up"
+        src="{{ section.settings.quote_image | img_url: '1x1' }}"
+        data-src="{{ section.settings.quote_image | img_url: 'x120' }}"
+        alt="{{ section.settings.quote_image.alt | escape }}">
+    </div>
+
+    <div class="TestimonialList Carousel Carousel--fadeIn" data-flickity-config='{{ flickity_options }}'>
+      {%- for block in section.blocks -%}
+        <div id="block-{{ block.id }}" class="Carousel__Cell testimonial {% if forloop.first %}is-selected{% endif %}" {{ block.shopify_attributes }} data-slide-index="{{ forloop.index0 }}">
+            {%- if block.settings.quote != blank -%}
+              <div class="testimonial-content">
+                {{ block.settings.quote }}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.author != blank -%}
+              <div class="testimonial-author">{{ block.settings.author }}</div>
+            {%- endif -%}
+          </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials 2",
+  "class": "section--testimonials",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background",
+      "label": "Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_background",
+      "label": "Background Image (Mobile)"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto rotate between testimonials",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "unit": "sec",
+      "label": "Change testimonials every",
+      "default": 5
+    },
+    {
+      "type": "image_picker",
+      "id": "quote_image",
+      "label": "Quote Image"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#575E6E"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote",
+          "info": "For best results, keep the word count consistent in each quote."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Testimonials 2",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

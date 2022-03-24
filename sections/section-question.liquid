@@ -1,0 +1,79 @@
+{{ 'section-question.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #section-{{ section.id }} .section-question {
+    background-color: {{ section.settings.q_bg_color }};
+  }
+  #section-{{ section.id }} .section-testimonial {
+    background-color: {{ section.settings.t_bg_color }};
+  }
+{% endstyle %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="section-question">
+  <div class="section-inner">
+    <div class="section-question">
+      <div class="section-question-inner">
+        <h2 class="question-title">{{ section.settings.question_title }}</h2>
+        <div class="question-descr">{{ section.settings.question_descr }}</div>
+      </div>
+    </div>
+    
+    <div class="section-testimonial">
+      <div class="section-testimonial-inner">
+        <div class="testimonial-image">
+          {% if section.settings.testimonial_image != blank %}
+          <img src="{{ section.settings.testimonial_image | img_url: 'master' }}" alt="">
+          {% endif %}
+        </div>
+        <div class="testimonial-descr">{{ section.settings.testimonial_descr }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Question",
+  "settings": [
+    {
+      "type": "text",
+      "id": "question_title",
+      "label": "Question Title"
+    },
+    {
+      "type": "textarea",
+      "id": "question_descr",
+      "label": "Question Description"
+    },
+    {
+      "type": "color",
+      "id": "q_bg_color",
+      "label": "Background Color",
+      "default": "#F7D6C5",
+      "info": "Question"
+    },
+    {
+      "type": "image_picker",
+      "id": "testimonial_image",
+      "label": "Testimonial Image"
+    },
+    {
+      "type": "textarea",
+      "id": "testimonial_descr",
+      "label": "Testimonial Description"
+    },
+    {
+      "type": "color",
+      "id": "t_bg_color",
+      "label": "Background Color",
+      "default": "#FDF7F3",
+      "info": "Testimonial"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Question"
+    }
+  ]
+}
+{% endschema %}

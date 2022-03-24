@@ -1,0 +1,53 @@
+<div class="cust-img-impact-sec-main">
+  <div class="cust-img-impact-sec-inn">
+    <div class="cust-img-impact-boxes">
+
+      <div class="cust-img-impact-box">
+        <div class="cust-img-impact-box-inn">     
+          <div class="cust-img-impact-img">
+            <img class="Image--lazyLoad" src="{{ section.settings.img | img_url: 'master' }}">
+          </div>
+          <div class="cust-img-impact-content">
+            <h2>{{ section.settings.title }}</h2>
+            {{ section.settings.content }}
+            <span>{{ section.settings.bottom }}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Impact Image Text Area",
+"class": "cust-img-impact-sec",
+"settings": [
+{
+"type": "image_picker",
+"id": "img",
+"label": "Image",
+"info": "722px x 680px required"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Period Poverty & Education"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content",
+"default": "<p>Education for one girl can break the cycle of poverty for generations.</p><p>“When I started Saalt, I knew girls' education would be a key part of our social mission. Education has done more to shape our confidence, prosperity, and fulfillment in life than any other single factor. Yet so many girls are halted early in their educational pursuits. The loss of potential is heartbreaking, and yet the solution is simple. We're passionate about the power one cup has to help a girl finish school, provide for her family, and afford her the confidence to care for her needs. I envision a world where our daughters and girls everywhere are limited by nothing but their own hard work and resolve to accomplish their dreams.”</p>"
+},
+{
+"type": "text",
+"id": "bottom",
+"label": "Bottom text",
+"default": "— CHERIE, SAALT FOUNDER & MOTHER OF DAUGHTERS"
+}
+]
+}
+{% endschema %}

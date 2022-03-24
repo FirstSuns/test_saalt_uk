@@ -1,0 +1,107 @@
+
+.section-blogs .section-inner {
+  padding: 80px 20px;
+}
+.section-blogs .section-title {
+  color: #3F4759;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 37px !important;
+  text-align: center;
+  margin-bottom: 0;
+}
+.section-blogs .blog-list-wrapper {
+  position: relative;
+  margin: 67px 57px 0;
+}
+.section-blogs .blog {
+  max-width: 502px;
+  margin-left: 42px;
+}
+.section-blogs .blog:first-child {
+  margin-left: 0;
+}
+.section-blogs .blog-title {
+  color: #3F4759 !important;
+  font-size: 22px !important;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 27px !important;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+.section-blogs .blog-descr {
+  color: #3F4759;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 27px;
+  margin-top: 24px;
+}
+.section-blogs .blog-btn {
+  color: #3F4759;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 27px;
+  display: inline-block;
+  text-decoration: underline;
+  margin-top: 24px;
+}
+.section-blogs .blog-list-arrows li {
+  position: absolute;
+  top: 170px;
+  list-style: none;
+  width: 50px;
+  cursor: pointer;
+}
+.section-blogs .blog-list-arrows .prev {
+  left: -42px;
+}
+.section-blogs .blog-list-arrows .next {
+  right: -42px;
+}
+
+@media (max-width: 1023px) {
+  .section-blogs .section-inner {
+    padding: 60px 20px;
+  }
+  .section-blogs .blog-list-wrapper {
+    margin: 57px 37px 0;
+  }
+  .section-blogs .blog {
+    max-width: 400px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-blogs .section-inner {
+    padding: 40px 20px;
+  }
+  .section-blogs .blog-list-wrapper {
+    margin: 20px 0px 0;
+  }
+  .section-blogs .blog {
+    max-width: 335px;
+    margin-left: 15px;
+  }
+  .section-blogs .blog-title {
+    margin-top: 20px;
+  }
+  .section-blogs .blog-list-arrows li {
+    top: 100px;
+  }
+  .section-blogs .blog-list-arrows .prev {
+    left: -20px;
+  }
+  .section-blogs .blog-list-arrows .next {
+    right: -20px;
+  }
+}
+
+@media (max-width: 374px) {
+  .section-blogs .blog {
+    margin-left: 0px;
+  }
+}

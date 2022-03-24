@@ -1,0 +1,18 @@
+{{ "saalt-custom-style.css" | asset_url | stylesheet_tag }}
+
+<script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/1ob5zLVl0tGNVDAihObqpQ" async></script>
+
+{% include 'saalt-loyalty-header' %}
+
+
+{% if customer %}
+
+  {% include 'saalt-loyalty-in' %}
+
+{% else %}
+
+  {% include 'saalt-loyalty-out' %}  
+   
+{% endif %}
+
+

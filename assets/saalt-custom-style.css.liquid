@@ -1,0 +1,294 @@
+@font-face {
+    font-family: beausite-grand;
+    src: url(https://yotpo-stool.s3.amazonaws.com/images/fonts/BeausiteGrand-Regular-Web.ttf);
+  }
+  @font-face {
+    font-family: gotham-book;
+    src: url(https://yotpo-stool.s3.amazonaws.com/images/fonts/Gotham%20Family/Gotham-Book.otf);
+  }
+  @font-face {
+    font-family: gotham-bold;
+    src: url(https://yotpo-stool.s3.amazonaws.com/images/fonts/Gotham%20Family/Gotham%20Bold.otf);
+  }
+
+  div#redeem-bg {
+    background-color: #FBEEDF !important;
+
+}
+div#activity-bg {
+    background-image: url({{'activity-bg.jpg' | assset_url }});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 0;
+}
+
+
+#saalt-loyalty-atf{
+    height: 75vh;
+    background-image: url({{'saalt-atf-banner.png' | assset_url }});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%); */
+    
+}
+#atf-content {
+    display: flex;
+    width: 55%;
+    height: 75%;
+    flex-flow: column;
+    justify-content: center;
+    padding-top: 300px;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+#saalt-title-atf, #saalt-atf-buttons {
+    width:50%;
+    
+}
+
+#saalt-title-atf h1 {
+    font-size: 79px !important;
+    color: #3F4759;
+    font-weight: normal;
+    font-family: "beausite-grand";
+    margin: 0px;
+}
+
+#saalt-title-atf p {
+    color: #3F4759;
+    font-size:16px;
+    margin-bottom: 35px;
+    font-family: 'gotham-book';
+}
+
+div#saalt-logo {
+    margin-bottom: -55px;
+    position: relative;
+    z-index: 1;
+    margin-left: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding:0;
+    
+}
+
+button:hover,button:focus {
+
+        background: none;
+        border: none;
+        padding:0;
+        cursor: pointer;
+        
+
+}
+#saalt-atf-buttons {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    width:40%;
+}
+#saalt-atf-buttons .prim-btn,#saalt-atf-buttons .sec-btn {
+    padding: 12px 0;
+    background-color: #fff;
+    border: none;
+    color:#363636;
+    margin-right: 10px;
+    text-decoration: none;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 15px;
+    font-family: 'gotham-bold';
+
+}
+
+/* #saalt-atf-buttons .sec-btn{
+    margin-top: 15px;
+    background-color:none !important;   
+    border:none;
+    color: #fff;
+    text-decoration: underline;
+    font-family: 'gotham-bold';
+} */
+
+
+#atf-content-mobile {
+    display:none;
+}
+
+#saalt-out {
+    width:100vw !important;
+}
+
+
+@media only screen and (max-width:1440px) {
+    #atf-content {
+ 
+        width: 75% !important;
+   
+    }
+    #saalt-title-atf {
+        width: 100% !important;
+    }
+    div#saalt-title-atf p {
+        width: 50% !important;
+        margin: 5px auto;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    #atf-content-mobile {
+        display:none;
+    }
+    #saalt-loyalty-atf {
+        height: 46vh !important;
+        background-size: cover;
+    
+    }
+    div#saalt-title-atf p {
+        width: 100% !important;
+  
+    }
+    
+    #atf-content {
+        display: flex;
+        padding-left: 50px;
+        height:52vh;
+        width:95% !important;
+        padding:0 !important;
+    }
+
+    #saalt-title-atf h1 {
+        font-size: 58px !important;
+    }
+
+
+    #saalt-title-atf p {
+     
+        font-size: 14px !important;
+    
+    }
+    #saalt-title-atf, #saalt-atf-buttons {
+        width:100%;
+        
+    }
+    #saalt-atf-buttons .prim-btn, #saalt-atf-buttons .sec-btn {
+
+        width: 15% !important;
+   
+    }
+
+}
+@media only screen and (max-width:768px) { 
+
+    #saalt-atf-buttons .prim-btn, #saalt-atf-buttons .sec-btn {
+
+        width: 23% !important;
+   
+    }
+
+    #saalt-loyalty-atf {
+        height: 40vh !important;
+    }
+    #atf-content {
+        padding:0 !important;
+        height:42vh !important;
+    }
+    #saalt-atf-buttons {
+   
+        height: 50px;
+        
+    }
+    #saalt-atf-buttons .prim-btn {
+        padding: 6px 0;
+        font-size: 16px;
+     
+    }
+    #saalt-atf-buttons .sec-btn,#saalt-title-atf p , #saalt-atf-buttons p
+     {
+        
+        font-size: 16px !important;
+    }
+ 
+}
+
+@media only screen and (max-width:425px) {
+    article#saalt-atf-buttons {
+    margin-top: 60px;
+}
+    #saalt-atf-buttons .prim-btn, #saalt-atf-buttons .sec-btn {
+
+        width: 35% !important;
+   
+    }
+    #saalt-loyalty-atf {
+        height: 58vh!important;
+        background-size: cover;
+        background-position: 55%;
+    }
+
+    article#saalt-atf-buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:40px !important;
+    }
+    
+    #saalt-title-atf h1 {
+        font-size: 50px !important;
+    }
+    #saalt-atf-buttons .prim-btn, #saalt-atf-buttons .sec-btn,#saalt-title-atf p , #saalt-atf-buttons p
+     {
+        
+        font-size: 14px !important;
+    }
+    #saalt-atf-buttons .prim-btn {
+        margin-top:10px;
+        padding:12px 0;
+    }
+
+    #atf-content {
+        display: flex;
+        width: 80%;
+        flex-flow: column;
+        justify-content: flex-end;
+        padding-left: 0px;
+        align-items: center;
+        margin: auto;
+        height: 45% !important;
+        padding: 20 !important;
+    }
+}
+@media only screen and (max-width:320px) {
+
+    #saalt-loyalty-atf {
+        height: 45vh!important;
+        background-size: cover;
+        background-position: 53%;
+    }
+    #saalt-title-atf h1 {
+        font-size: 40px !important;
+    }
+    #atf-content {
+        display: flex;
+        width: 95%;
+        flex-flow: column;
+        justify-content: flex-end;
+        padding-left: 0px;
+        align-items: center;
+        margin: auto;
+        height: 60% !important;
+        padding: 10 !important;
+    }
+
+}

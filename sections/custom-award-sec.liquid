@@ -1,0 +1,51 @@
+<div class="custom-award-sec-main">
+  <div class="custom-award-sec-inn">
+
+    <div class="custom-award-sec-title">
+      <h2>{{ section.settings.title1 }}</h2>
+    </div>
+
+    <div class="custom-award-sec-img">
+      <img class="Image--lazyLoad" src="{{ section.settings.img | img_url: 'master' }}">
+    </div>
+
+    <div class="custom-award-sec-footer">
+      <h3>{{ section.settings.title2 }}</h3>
+      {{ section.settings.content }}
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Custom Award",
+"class": "custom-award-sec",
+"settings": [
+{
+"type": "text",
+"id": "title1",
+"label": "Title1",
+"default": "We Walk The Talk"
+},
+{
+"type": "image_picker",
+"id": "img",
+"label": "Image",
+"info": "278 * 278px required"
+},
+{
+"type": "text",
+"id": "title2",
+"label": "Title2",
+"default": "Philanthropy Champion"
+},
+{
+"type": "richtext",
+"id": "content",
+"label": "Content",
+"default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>"
+}
+]
+}
+{% endschema %}

@@ -1,0 +1,161 @@
+<section id="section-{{ section.id }}">
+  {%- capture mobile_size -%}750x{% if section.settings.image.height >= 960 %}960{% else %}{{ section.settings.image.height }}{% endif %}{%- endcapture -%}
+
+  <div class="FlexboxIeFix">
+    <div class="ImageHero {% if section.settings.section_size != 'normal' %}ImageHero--{{ section.settings.section_size }}{% endif %} ImageHero--newsletter" {% if section.settings.image %}style="background: url({{ section.settings.image | img_url: '1x1' }})"{% endif %}>
+      <div class="ImageHero__ImageWrapper">
+        <div class="ImageHero__Image Image--lazyLoad Image--zoomOut"
+             data-optimumx="1.4"
+             data-expand="-150"
+             {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: mobile_size, crop: 'center' }} 750w, {{ section.settings.image | img_url: '1000x' }} 1000w, {{ section.settings.image | img_url: '1500x' }} 1500w"{% endif %}>
+        </div>
+
+        <noscript>
+          <div class="ImageHero__Image" style="background-image: url({{ section.settings.image | img_url: '1000x' }})"></div>
+        </noscript>
+
+        {%- unless section.settings.image != blank -%}
+          <div class="PlaceholderBackground PlaceholderSvg--dark">
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'PlaceholderBackground__Svg' }}
+          </div>
+        {%- endunless -%}
+      </div>
+
+      <div class="ImageHero__ContentOverlay">
+        <header class="SectionHeader SectionHeader--center">
+          {%- if section.settings.subheading != blank -%}
+            <h3 class="SectionHeader__SubHeading Heading u-h5">{{ section.settings.subheading | escape }}</h3>
+          {%- endif -%}
+
+          {%- if section.settings.title != blank -%}
+            <h2 class="SectionHeader__Heading Heading u-h1">{{ section.settings.title | escape }}</h2>
+          {%- endif -%}
+
+          {%- if section.settings.content != blank -%}
+            <div class="SectionHeader__Description">
+              {{ section.settings.content }}
+            </div>
+          {%- endif -%}
+        </header>
+
+        {%- assign newsletter_id = 'footer-' | append: section.id -%}
+
+        <form action="https://saaltco.us17.list-manage.com/subscribe/post?u=26fd1b7f04be9a047fb9dc489&amp;id=9d5f6ea4f7&amp;SIGNUP=Website" class="validate mc-form">
+            <div class="field-wrap">
+                  <label for="mce-EMAIL" style="display: none;">Email Address</label>
+                  <input type="email" name="EMAIL" class="required email single-field" id="mce-EMAIL" placeholder="Email address">
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_26fd1b7f04be9a047fb9dc489_728ebf2291" tabindex="-1" value="">
+                </div>
+                  <button type="submit" name="subscribe">
+                    <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>arrow_right</title>
+                        <g class="arrow-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                            <g class="arrow-right" transform="translate(1.000000, 1.000000)" stroke-width="2">
+                                <path d="M0,10 L20,10"></path>
+                                <polyline points="10 0 20 10 10 20"></polyline>
+                            </g>
+                        </g>
+                    </svg>
+                  </button>
+            </div>
+            <div class="mc-message"></div>
+            <div class="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-{{ section.id }},
+  #section-{{ section.id }} .Heading {
+    color: {{ section.settings.text_color }};
+  }
+
+  #section-{{ section.id }} .Form__Submit {
+    border-color: {{ section.settings.text_color }};
+    color: {{ section.settings.button_color }};
+  }
+
+  #section-{{ section.id }} .Form__Submit::before {
+    background-color: {{ section.settings.text_color }};
+  }
+
+  @media (-moz-touch-enabled: 0), (hover: hover) {
+    #section-{{ section.id }} .Form__Submit:hover {
+      color: {{ section.settings.text_color }};
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_size",
+      "label": "Section size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "small"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1500 x 800px .jpg recommended"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button text",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-heading",
+      "default": "Keep updated"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Newsletter"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>A short sentence describing what someone will receive by subscribing</p>"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Promotional",
+      "name": "Newsletter",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

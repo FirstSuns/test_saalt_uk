@@ -1,0 +1,101 @@
+{{ 'section-products.css' | asset_url | stylesheet_tag }}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="section-products">
+  <div class="section-inner">
+    <h2 class="section-title">{{ section.settings.title }}</h2>
+
+    {% if section.blocks.size > 0 %}
+    <div class="product-list">
+      {% for block in section.blocks %}
+      <div class="product">
+        <a href="{{ block.settings.product_url }}">
+          <div class="product-inner">
+            <div class="product-image">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+              <div class="product-descr">{{ block.settings.descr }}</div>
+              <div class="product-absorbency">
+                <img src="{{ block.settings.absorbency_image | img_url: 'master' }}" class="absorbency-image" alt="">
+                <div class="absorbency-text">{{ block.settings.absorbency_text }}</div>
+              </div>
+            </div>
+            <div class="product-title">{{ block.settings.title }}</div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if section.settings.btn_text != blank %}
+    <div class="section-button-wrapper">
+      <a href="{{ section.settings.btn_url }}" class="section-btn">{{ section.settings.btn_text }}</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "absorbency_text",
+          "label": "Absorbency Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "absorbency_image",
+          "label": "Absorbency Image"
+        },
+        {
+          "type": "textarea",
+          "id": "descr",
+          "label": "Description"
+        },
+        {
+          "type": "url",
+          "id": "product_url",
+          "label": "Product Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products"
+    }
+  ]
+}
+{% endschema %}

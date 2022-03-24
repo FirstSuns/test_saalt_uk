@@ -1,0 +1,45 @@
+{{ 'section-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="section-image-with-text">
+  <div class="section-inner">
+    <div class="section-image">
+      {% if section.settings.image != blank %}
+      <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+      {% endif %}
+    </div>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <h2 class="section-title">{{ section.settings.title }}</h2>
+        <div class="section-descr">{{ section.settings.descr }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "descr",
+      "label": "Description"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text 2"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,132 @@
+{{ 'section-video.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #section-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+  }
+{% endstyle %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="section-video">
+  <div class="section-inner">
+    <div class="top-content">
+      <h2 class="section-title">{{ section.settings.title }}</h2>
+      <div class="section-descr">{{ section.settings.descr }}</div>
+    </div>
+
+    {% if section.blocks.size > 0 %}
+    <div class="video-list">
+      {% for block in section.blocks %}
+      <div class="video">
+        <div class="video-inner">
+          <iframe class="video-iframe" src="{{ block.settings.video_url }}" width="100%" height="100%" frameborder="0">
+            <source data-video-type="youtube" type="video/mp4">
+          </iframe>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if section.settings.btn_text != blank %}
+    <div class="section-button-wrapper">
+      <a href="{{ section.settings.btn_url }}" class="section-btn">{{ section.settings.btn_text }}</a>
+    </div>
+    {% endif %}
+  </div>
+
+	<div class="video-popup">
+		<div class="video-popup-inner">
+			<div class="iframe-wrapper">
+				<iframe class="video__popup" autoplay controls playsinline type="video/mp4">
+				</iframe>
+				<span class="close-video">x</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+  $(document).ready(function() {
+    $('#section-{{ section.id }}').on('click', '.video', function(e) {
+      console.log('ghost')
+    });
+		$('#section-{{ section.id }}').on('click', '.video-iframe', function(e) {
+      console.log('ghost')
+				var iframe_src = $(this).attr('src'),
+						iframe = $('#section-{{ section.id }} .video-popup'),
+						iframe_video = $('#section-{{ section.id }} .video-popup .video__popup'),
+						close_btn = $('#section-{{ section.id }} .video-popup .close-video'),
+						header_background = $('.header__color'),
+						body = $('body');
+
+			iframe_src = iframe_src + '?autoplay=1&rel=0'; // for autoplaying the popup video
+
+			// change the video source with the clicked one
+			$(iframe_video).attr('src', iframe_src);
+			$(iframe).fadeIn().addClass('show-video');
+			$(header_background).fadeIn().addClass('video__background');
+
+			// remove the video overlay when clicking outside the video
+			$(document).on('click', function(e) {
+				if($(iframe).is(e.target) || $(close_btn).is(e.target)) {
+					$(iframe).removeClass('show-video');
+					$(header_background).removeClass('video__background');
+					$(iframe_video).attr('src', '');
+				}
+			});
+		});
+	});
+</script>
+
+{% schema %}
+{
+  "name": "Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "descr",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#3F4759",
+      "info": "Background Color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,52 @@
+
+.section-quiz .section-inner {
+  padding: 80px 20px;
+}
+.section-quiz .section-title {
+  color: #3F4759;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 37px !important;
+  margin-bottom: 0;
+  text-align: center;
+}
+.section-quiz .section-descr {
+  color: #3F4759;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+  margin-top: 24px;
+  text-align: center;
+}
+.section-quiz .quiz-wrapper {
+  margin-top: 30px;
+  padding: 0 10px;
+}
+.section-quiz .saalt-cup-quiz-question input[type=radio] {
+  margin: 4px 5px 0 0;
+}
+
+@media (max-width: 767px) {
+  .section-quiz .section-inner {
+    padding: 40px 20px;
+  }
+  .section-quiz .section-title {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+  .section-quiz .section-descr {
+    font-size: 15px;
+    line-height: 23px;
+    margin-top: 14px;
+  }
+  .section-quiz .quiz-wrapper {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 374px) {
+  .section-quiz .quiz-wrapper {
+    padding: 0;
+  }
+}

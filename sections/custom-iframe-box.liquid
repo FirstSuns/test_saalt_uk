@@ -1,0 +1,54 @@
+<div class="custom-iframe-box-main">
+  <div class="custom-iframe-box-inn">
+    <div class="custom-iframe-box-content-area">
+    
+      <div class="custom-iframe-box-title">
+        <h2>{{ section.settings.title }}</h2>
+      </div>
+      
+      <div class="custom-iframe-area">
+        {{ section.settings.iframe }}
+      </div>
+      
+      {% if section.settings.btn %}
+      <div class="cust-iframe-footer">
+        <a target="_blank" {% if section.settings.url %}href="{{ section.settings.url }}"{% endif %}>{{ section.settings.btn }}</a>
+      </div>
+      {% endif %}
+    
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Custom Iframe Box",
+"class": "custom-iframe-box",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "2020 Impact Report"
+},
+{
+"type": "html",
+"id": "iframe",
+"label": "Iframe",
+"default": "<iframe src='https://www.yumpu.com/en/embed/view/XN2GH6Vg4QsIemMh' allowfullscreen='true' allowtransparency='true' frameborder='0'></iframe>",
+"info": "add iframe code here"
+},
+{
+"type": "text",
+"id": "btn",
+"label": "Button",
+"default": "View All Impact Reports"
+},
+{
+"type": "url",
+"id": "url",
+"label": "Button link"
+}
+]
+}
+{% endschema %}

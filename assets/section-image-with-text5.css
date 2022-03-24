@@ -1,0 +1,112 @@
+
+.section-image-with-text5 .section-inner {
+  padding: 80px 63px 70px;
+}
+.section-image-with-text5 .section-title {
+  color: #3F4759;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 37px !important;
+  margin-bottom: 52px;
+  text-align: center;
+}
+.section-image-with-text5 .section-main {
+  display: flex;
+  min-height: 560px;
+}
+.section-image-with-text5 .section-image {
+  max-width: 525px;
+  width: 100%;
+}
+.section-image-with-text5 .section-image img {
+  height: 100%;
+  object-fit: cover;
+}
+.section-image-with-text5 .section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 25px;
+}
+.section-image-with-text5 .section-content-inner {
+  max-width: 500px;
+}
+.section-image-with-text5 .section-title2 {
+  color: #3F4759;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 37px !important;
+  margin-bottom: 24px;
+}
+.section-image-with-text5 .section-descr {
+  color: #3F4759;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+.section-image-with-text5 .section-button-wrapper {
+  margin-top: 50px;
+}
+.section-image-with-text5 .section-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  line-height: 16px;
+  background-color: #3F4759;
+  text-transform: uppercase;
+  border-radius: 136px;
+}
+
+@media (min-width: 1500px) {
+  .section-image-with-text5 .section-content-inner {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .section-image-with-text5 .section-inner {
+    padding: 50px 20px 40px;
+  }
+  .section-image-with-text5 .section-main {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-image-with-text5 .section-inner {
+    padding: 24px 0px 0;
+  }
+  .section-image-with-text5 .section-title {
+    font-size: 26px !important;
+    line-height: 32px !important;
+    margin-bottom: 25px;
+  }
+  .section-image-with-text5 .section-main {
+    min-height: unset;
+    flex-direction: column;
+  }
+  .section-image-with-text5 .section-image {
+    max-width: 100%;
+  }
+  .section-image-with-text5 .section-content {
+    padding: 25px 20px 40px;
+    text-align: center;
+  }
+  .section-image-with-text5 .section-title2 {
+    font-size: 22px !important;
+    line-height: 27px !important;
+    margin-bottom: 22px;
+  }
+  .section-image-with-text5 .section-button-wrapper {
+    margin-top: 32px;
+  }
+}

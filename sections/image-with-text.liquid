@@ -1,0 +1,67 @@
+{% style %}
+  #section-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }}
+  }
+  #section-{{ section.id }} .section-inner {
+    max-width: {{ section.settings.max_width | plus: 48 }}px;
+  }
+  #section-{{ section.id }} .section-title {
+    color: {{ section.settings.color }}
+  }
+{% endstyle %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="image-with-text">
+  <div class="section-inner">
+    <div class="section-image">
+      <img class="Image--lazyLoad"
+        src="{{ section.settings.image | img_url: '1x1' }}"
+        data-src="{{ section.settings.image | img_url: 'master' }}"
+        alt="{{ section.settings.image.alt | escape }}">
+    </div>
+
+    <h2 class="section-title Heading">{{ section.settings.title }}</h2>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image with text",
+    "class": "section--image-with-text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Title Color",
+        "default": "#354759"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "text",
+        "id": "max_width",
+        "label": "Max Width",
+        "info": "Max width for content. Please input number."
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Image with text",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}

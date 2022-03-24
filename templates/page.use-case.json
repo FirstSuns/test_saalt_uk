@@ -1,0 +1,299 @@
+{
+  "sections": {
+    "16321735932f8d771a": {
+      "type": "home-slideshow",
+      "blocks": {
+        "16321735932f8d771a-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hero_1.png",
+            "mobile_image": "shopify:\/\/shop_images\/LG_-_Hero_Mobile.png",
+            "title": "Thank you gang for period-caring",
+            "subheading": "Ready to make the switch?! Do good every wear.",
+            "button_1_text": "Shop all",
+            "button_1_link": "shopify:\/\/collections\/shop-all",
+            "button_2_text": "",
+            "button_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16321735932f8d771a-1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "cycle_speed": 5
+      }
+    },
+    "163217233887d0f88a": {
+      "type": "section-introduction",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Monogram-svg.png",
+        "title": "Welcome to the comfortable, sustainable, leakproof life.",
+        "description": "We are on a mission to end panicked sprints to the bathroom, sweaters tied around waists, and sleeping on towels.",
+        "subtitle": "No waste. No leaks. No worries."
+      }
+    },
+    "icon_banner": {
+      "type": "section-icon-banner",
+      "blocks": {
+        "d0351249-c352-4023-8346-04a610492270": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Clock-svg.png",
+            "title": "Wear Up to 12 hours"
+          }
+        },
+        "3e4d62ed-3328-4fcc-b5f5-28b139e0caae": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dollar-svg.png",
+            "title": "Save More"
+          }
+        },
+        "b6dfa450-2ef8-4411-abf1-e013756f4237": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Reuse-svg.png",
+            "title": "Waste Less"
+          }
+        },
+        "d7791921-bb04-4ea6-87bb-e214763400bd": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Heart-svg.png",
+            "title": "Pure Comfort"
+          }
+        }
+      },
+      "block_order": [
+        "d0351249-c352-4023-8346-04a610492270",
+        "3e4d62ed-3328-4fcc-b5f5-28b139e0caae",
+        "b6dfa450-2ef8-4411-abf1-e013756f4237",
+        "d7791921-bb04-4ea6-87bb-e214763400bd"
+      ],
+      "settings": {
+        "bg_color": "#f7d6c5"
+      }
+    },
+    "products": {
+      "type": "section-products",
+      "blocks": {
+        "3d1a1b18-c6b6-4ac5-80bb-14ec90204a74": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LG-High-Waist-Brief_5.png",
+            "title": "High Waist Brief",
+            "absorbency_text": "Regular to high absorbency",
+            "absorbency_image": "shopify:\/\/shop_images\/mid_heavy.png",
+            "descr": "<ul>\n<li>Regular to heavy period flow<\/li>\n<li>Light bladder leaks<\/li>\n<li>Spotting or Discharge<\/li>\n<li>Replace a pad<\/li>\n<li>Worry-free backup to a tampon, cup, or disc<\/li>\n<li>Everyday protection<\/li>\n<\/ul>",
+            "product_url": "shopify:\/\/products\/leakproof-high-waist"
+          }
+        },
+        "f7fd9ff2-001e-4de9-83d6-8320e49e9c85": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LG-Lace-Hipster_2.png",
+            "title": "Leakproof  Lace Hipster",
+            "absorbency_text": "Light absorbency",
+            "absorbency_image": "shopify:\/\/shop_images\/light.png",
+            "descr": "<ul>\n<li>Light period leaks<\/li>\n<li>Spotting<\/li>\n<li>Discharge<\/li>\n<li>Replace a panty liner<\/li>\n<li>Worry-free backup to a tampon, cup, or disc<\/li>\n<li>Everyday protection<\/li>\n<\/ul>",
+            "product_url": "shopify:\/\/products\/leakproof-lace-hipster"
+          }
+        },
+        "317506b8-e378-49e6-a85a-0839e2256edd": {
+          "type": "product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/LG-Mesh-Hipster_2.png",
+            "title": "Mesh Hipster",
+            "absorbency_text": "Regular to high absorbency",
+            "absorbency_image": "shopify:\/\/shop_images\/mid_heavy.png",
+            "descr": "<ul>\n<li>Regular to heavy period flow<\/li>\n<li>Light bladder leaks<\/li>\n<li>Spotting or Discharge<\/li>\n<li>Replace a pad<\/li>\n<li>Worry-free backup to a tampon, cup, or disc<\/li>\n<li>Everyday protection<\/li>\n<\/ul>",
+            "product_url": "shopify:\/\/products\/leakproof-mesh-hipster"
+          }
+        }
+      },
+      "block_order": [
+        "3d1a1b18-c6b6-4ac5-80bb-14ec90204a74",
+        "f7fd9ff2-001e-4de9-83d6-8320e49e9c85",
+        "317506b8-e378-49e6-a85a-0839e2256edd"
+      ],
+      "settings": {
+        "title": "Shop Our Favorites",
+        "btn_text": "Shop All Styles",
+        "btn_url": "shopify:\/\/collections\/saalt-wear"
+      }
+    },
+    "16321740538cbefbf4": {
+      "type": "image-with-text-block2",
+      "settings": {
+        "desktop_image": "shopify:\/\/shop_images\/Saalt_Wear_-_Hero.png",
+        "title": "This is Saalt Wear. The only underwear period and bladder leaks won't ruin.",
+        "descr": "It's super thin, ultra-absorbent, and leaves you feeling (magically) dry. Wear it. Wash it. Wear it again.",
+        "title_color": "#354759",
+        "descr_color": "#575e6e",
+        "mobile_title_color": "#354759",
+        "mobile_descr_color": "#575e6e",
+        "mobile_bg_color": "",
+        "button_1_text": "Shop Saalt Wear",
+        "button_1_link": "shopify:\/\/collections\/saalt-wear",
+        "button_2_text": "",
+        "button_2_link": ""
+      }
+    },
+    "image_with_text": {
+      "type": "section-image-with-text2",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/LG-Saalt_Cups.png",
+        "title": "Saalt Cups, We're Obsessed!",
+        "descr": "They're beautiful, comfortable, and better for the environment too! And they last up to 10 years, that's as long as your passport.",
+        "btn_text": "Shop Saalt Cups",
+        "btn_url": "shopify:\/\/collections\/cups",
+        "bg_color": "#3f4759"
+      }
+    },
+    "testimonials": {
+      "type": "section-testimonials",
+      "blocks": {
+        "183e266f-e1f8-49f8-a8bc-d2ee4e476bb4": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "I have always wanted to try a cup but was unsure of it. <b>I can’t feel the cup at all.<\/b> I put it in before I leave the house then forget about it for the rest of the day. Super easy and so much better for my body and the environment!",
+            "author": "Morgan C."
+          }
+        },
+        "80843bb4-7351-46da-a31f-2436b30bace3": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "<b>This is the first cup I've ever used and I LOVE it! <\/b>Literally cannot feel it at all when inserted. And the underwear is so comfortable, much more so than disposable pads. I was skeptical but they are some sort of sorcery because they stay dry! I'm telling anyone who will listen to give these products a try.",
+            "author": "Kelsey R."
+          }
+        },
+        "1e3cb94a-24b8-4086-a4b6-eb9c5052a7ab": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "First time cup user here! <b>My only regret is not trying one sooner.<\/b> This thing is a game changer! I'm 25, never had children, and have been using pads up until now as I've found tampons uncomfortable. I took the Put a Cup in it quiz, and this cup was recommended for me due to my low cervix. This was a life changer for me. The cup is so comfortable and it never leaked for once. I'm never going back to pads again.",
+            "author": "Tanisha"
+          }
+        }
+      },
+      "block_order": [
+        "183e266f-e1f8-49f8-a8bc-d2ee4e476bb4",
+        "80843bb4-7351-46da-a31f-2436b30bace3",
+        "1e3cb94a-24b8-4086-a4b6-eb9c5052a7ab"
+      ],
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg_2x_23be4269-052a-4f65-97ff-349678040779.png",
+        "top_image": "shopify:\/\/shop_images\/QuoteMark-svg.png"
+      }
+    },
+    "image_with_text5": {
+      "type": "section-image-with-text5",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/LG-Bundle_5.png",
+        "title": "Build a Bundle",
+        "title2": "Why not bundle and save 20%?",
+        "descr": "Bundle your choice of Saalt Wear and Saalt Cups to stay covered all cycle long. Simply add your favorites to cart, discounts are automatically applied.\n<br><br>\nBuy 3, save 10%<br>\nBuy 5, save 15%<br>\nBuy 7, save 20%",
+        "btn_text": "Shop saalt Bundle",
+        "btn_url": "shopify:\/\/pages\/build-a-bundle",
+        "bg_color": "#fcefe8"
+      }
+    },
+    "introduction": {
+      "type": "section-introduction",
+      "blocks": {
+        "c27f9c58-fdc0-45ab-9864-40f947fb1740": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Chat-svg.png",
+            "title": "live Chat",
+            "link": "https:\/\/v2.zopim.com\/widget\/popout.html?key=DibbXUebfGYfJpmOpguVy6hmJcM7vDqc"
+          }
+        },
+        "1e90c639-72dc-45b8-8cbd-e1071c839ccc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Text-svg.png",
+            "title": "Text Us",
+            "link": "sms:\/\/+18552158426"
+          }
+        },
+        "6584d8aa-7f23-4237-b378-61ae65b5eb66": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Email-svg.png",
+            "title": "Email US",
+            "link": "mailto:sayhey@saalt.com"
+          }
+        }
+      },
+      "block_order": [
+        "c27f9c58-fdc0-45ab-9864-40f947fb1740",
+        "1e90c639-72dc-45b8-8cbd-e1071c839ccc",
+        "6584d8aa-7f23-4237-b378-61ae65b5eb66"
+      ],
+      "settings": {
+        "title": "We're here to get you to period bliss.",
+        "description": "If you're not happy with your Saalt product, we'll send you a replacement you'll love or your money back per our Period Bliss Guarantee.",
+        "subtitle": "Reach out to our Saalt Coaches"
+      }
+    },
+    "custom_html": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "",
+        "title": "Let's get social @saaltco",
+        "html": "<div class=\"yotpo yotpo-pictures-widget\" data-gallery-id=\"5f4da70042c01f00012f157b\" style=\"width: 100%\">\n<\/div>",
+        "text_color": "#223c52",
+        "background": "#fbeedf"
+      }
+    },
+    "testimonials2": {
+      "type": "section-testimonials2",
+      "blocks": {
+        "d5e545f1-248b-42c1-9e06-18b61af688d4": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "“I’ve tried out a few different brands, with my hands-down favorite being Saalt Menstrual Cups. The comfortable menstrual cup I swear by.”",
+            "image": "shopify:\/\/shop_images\/Bustle-svg.png"
+          }
+        },
+        "b7458389-80f1-4b27-984e-7764bdf5a848": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "“I’ve tried out a few different brands, with my hands-down favorite being Saalt Menstrual Cups. The comfortable menstrual cup I swear by.”",
+            "image": "shopify:\/\/shop_images\/Bustle-svg.png"
+          }
+        },
+        "2cc3d060-61fc-4827-bc40-ae8a75cfd7f9": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "“I’ve tried out a few different brands, with my hands-down favorite being Saalt Menstrual Cups. The comfortable menstrual cup I swear by.”",
+            "image": "shopify:\/\/shop_images\/Bustle-svg.png"
+          }
+        }
+      },
+      "block_order": [
+        "d5e545f1-248b-42c1-9e06-18b61af688d4",
+        "b7458389-80f1-4b27-984e-7764bdf5a848",
+        "2cc3d060-61fc-4827-bc40-ae8a75cfd7f9"
+      ],
+      "settings": {
+        "bg_color": "#f7d6c5"
+      }
+    }
+  },
+  "order": [
+    "16321735932f8d771a",
+    "163217233887d0f88a",
+    "icon_banner",
+    "products",
+    "16321740538cbefbf4",
+    "image_with_text",
+    "testimonials",
+    "image_with_text5",
+    "introduction",
+    "custom_html",
+    "testimonials2"
+  ]
+}

@@ -1,0 +1,87 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+{{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  {% if section.settings.bg_image != blank %}
+  #section-{{ section.id }} .section-inner {
+    background-image: url({{ section.settings.bg_image | img_url: 'master' }});
+  }
+  {% endif %}
+{% endstyle %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="section-testimonials">
+  <div class="section-inner">
+    {% if section.blocks.size > 0 %}
+    <div class="section-image">
+      <img src="{{ section.settings.top_image | img_url: 'master' }}" alt="">
+    </div>
+
+    <div class="testimonial-list">
+      {% for block in section.blocks %}
+      <div class="testimonial">
+        <div class="testimonial-inner">
+          <div class="testimonial-descr">{{ block.settings.descr }}</div>
+          <h3 class="testimonial-author">{{ block.settings.author }}</h3>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  $('#section-{{ section.id }} .testimonial-list').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_image",
+      "label": "Top Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "descr",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials 3"
+    }
+  ]
+}
+{% endschema %}

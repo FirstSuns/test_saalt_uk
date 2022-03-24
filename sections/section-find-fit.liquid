@@ -1,0 +1,153 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+{{ 'section-find-fit.css' | asset_url | stylesheet_tag }}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" class="section-find-fit">
+  <div class="section-inner">
+    {% if section.settings.image != blank %}
+    <div class="top-image">
+      <img src="{{ section.settings.image | img_url: 'master' }}" alt="">
+    </div>
+    {% endif %}
+    <h2 class="section-title">{{ section.settings.title }}</h2>
+    <div class="section-descr">{{ section.settings.descr }}</div>
+
+    {% if section.blocks.size > 0 %}
+    <div class="saalt-list">
+      {% for block in section.blocks %}
+      <div class="saalt">
+        <div class="saalt-inner">
+          <div class="saalt-image">
+            <img src="{{ block.settings.image | img_url: 'master' }}" alt="">
+          </div>
+          <h3 class="saalt-title">{{ block.settings.title }}</h3>
+          <div class="saalt-descr">{{ block.settings.descr }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if section.settings.btn_text != blank %}
+    <div class="section-button-wrapper">
+      <a href="{{ section.settings.btn_url }}" class="section-btn">{{ section.settings.btn_text }}</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  var saalt_carousel = $('#section-{{ section.id }} .saalt-list');
+
+  if ($(window).width() <= 767) {
+    if (!saalt_carousel.hasClass('slick-initialized')) {
+      saalt_carousel.slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        mobileFirst: true,
+        variableWidth: true,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: "unslick"
+          }
+        ]
+      });
+    }
+  }
+
+  $(window).on('load resize orientationchange', function() {
+    if ($(window).width() > 767) {
+      if (saalt_carousel.hasClass('slick-initialized')) {
+        saalt_carousel.slick('unslick');
+      }
+    } else {
+      if (!saalt_carousel.hasClass('slick-initialized')) {
+        saalt_carousel.slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          mobileFirst: true,
+          variableWidth: true,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 767,
+              settings: "unslick"
+            }
+          ]
+        });
+      }
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Find fit",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Top Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "descr",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "saalt",
+      "name": "Saalt",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "descr",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Find fit"
+    }
+  ]
+}
+{% endschema %}

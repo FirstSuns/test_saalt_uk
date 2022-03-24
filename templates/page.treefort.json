@@ -1,0 +1,261 @@
+{
+  "sections": {
+    "163226280058b695d2": {
+      "type": "brands",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TF_-_Hero.png",
+        "mobile_image": "shopify:\/\/shop_images\/TF_-_B_Corp_MOBILE_2.png",
+        "title": "",
+        "descr": "",
+        "bg_color": ""
+      }
+    },
+    "163226457570b9cb76": {
+      "type": "brands",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TF_-_Brands.png",
+        "mobile_image": "shopify:\/\/shop_images\/TF_-_B_Corp_MOBILE_3.png",
+        "title": "",
+        "descr": "",
+        "bg_color": ""
+      }
+    },
+    "16322626175acf3fc1": {
+      "type": "section-text",
+      "settings": {
+        "title": "GIVEAWAY",
+        "descr": "",
+        "btn_text": "",
+        "btn_url": "",
+        "bg_color": "#c1e5de"
+      }
+    },
+    "1632265076eca50c30": {
+      "type": "brands",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TF_-_Hero_1.png",
+        "mobile_image": "shopify:\/\/shop_images\/TF_-_Giveaway_MOBILE_1.png",
+        "title": "",
+        "descr": "",
+        "bg_color": ""
+      }
+    },
+    "16322636962779ecfe": {
+      "type": "custom-html",
+      "settings": {
+        "subheading": "Get all the inside scoop on all you need to know about simplified period care.",
+        "title": "Sign up to enter our giveaway",
+        "html": "<div class=\"klaviyo-form-Ynmcup\"><\/div>",
+        "text_color": "#223c52",
+        "background": "#ffffff"
+      }
+    },
+    "1632263980dacfc841": {
+      "type": "section-text",
+      "settings": {
+        "title": "IMPACT",
+        "descr": "",
+        "btn_text": "",
+        "btn_url": "",
+        "bg_color": "#c1e5de"
+      }
+    },
+    "image_with_text": {
+      "type": "section-image-with-text2",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TF_-_Image_with_text.png",
+        "title": "A local Boise B Corp",
+        "descr": "Saalt is one of many local Boise companies using business as a force for good. We give 2% back to donate period care to those in need.",
+        "btn_text": "LEARN MORE",
+        "btn_url": "shopify:\/\/blogs\/news\/saalt-joins-the-b-corp-community",
+        "bg_color": "#08123b"
+      }
+    },
+    "163226514682c1acff": {
+      "type": "brands",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TF_-_Brands_-_SUSTAIN_e6603834-c629-4367-a2c7-aa86c4576dc4.png",
+        "mobile_image": "shopify:\/\/shop_images\/TF_-_1_Cup_MOBILE_1.png",
+        "title": "",
+        "descr": "",
+        "bg_color": ""
+      }
+    },
+    "16322640141b26929a": {
+      "type": "brands",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hero_1.png",
+        "title": "",
+        "descr": "",
+        "bg_color": ""
+      }
+    },
+    "1632264011b6208758": {
+      "type": "section-text",
+      "settings": {
+        "title": "SHOP",
+        "descr": "",
+        "btn_text": "",
+        "btn_url": "",
+        "bg_color": "#c1e5de"
+      }
+    },
+    "icon_banner": {
+      "type": "section-icon-banner",
+      "blocks": {
+        "d0351249-c352-4023-8346-04a610492270": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Clock-svg.png",
+            "title": "Wear Up to 12 hours"
+          }
+        },
+        "3e4d62ed-3328-4fcc-b5f5-28b139e0caae": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dollar-svg.png",
+            "title": "Save More"
+          }
+        },
+        "b6dfa450-2ef8-4411-abf1-e013756f4237": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Reuse-svg.png",
+            "title": "Waste Less"
+          }
+        },
+        "d7791921-bb04-4ea6-87bb-e214763400bd": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Heart-svg.png",
+            "title": "Pure Comfort"
+          }
+        }
+      },
+      "block_order": [
+        "d0351249-c352-4023-8346-04a610492270",
+        "3e4d62ed-3328-4fcc-b5f5-28b139e0caae",
+        "b6dfa450-2ef8-4411-abf1-e013756f4237",
+        "d7791921-bb04-4ea6-87bb-e214763400bd"
+      ],
+      "settings": {
+        "bg_color": "#ffffff"
+      }
+    },
+    "16322674197397eae0": {
+      "type": "section-image-with-text2",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TF_-_Saalt_Cup_1.png",
+        "title": "This is the Saalt Cup. It's like modern period magic.",
+        "descr": "It's comfortable, holds 3x more than a tampon, and lasts as long as your passport.",
+        "btn_text": "<b>SHOP SAALT CUPS<\/b>",
+        "btn_url": "shopify:\/\/collections\/cups",
+        "bg_color": "#7e7fbc"
+      }
+    },
+    "1632268403fca9d224": {
+      "type": "section-image-with-text2",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/TF_-_Saalt_Wear_1.png",
+        "title": "This is Saalt Wear. The only underwear period and bladder leaks won't ruin.",
+        "descr": "It's super thin, ultra-absorbent, and leaves you feeling (magically) dry. Wear it. Wash it. Wear it again.",
+        "btn_text": "<b>SHOP SAALT WEAR<b><\/b><\/b>",
+        "btn_url": "shopify:\/\/collections\/saalt-wear",
+        "bg_color": "#7e7fbc"
+      }
+    },
+    "testimonials": {
+      "type": "section-testimonials",
+      "blocks": {
+        "183e266f-e1f8-49f8-a8bc-d2ee4e476bb4": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "<p2 style=\"color:white\">Love it!!! Never going back to tampons. My Saalt Cup is so convenient and easy to use!<\/p2>",
+            "author": "<p2 style=\"color:white\">Kaitlyn<\/p2>"
+          }
+        },
+        "80843bb4-7351-46da-a31f-2436b30bace3": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "<p2 style=\"color:white\">I'm in love with this cup!! This is the only cup I can use comfortably, with no leaks, and during a workout!<\/p2>",
+            "author": "<p2 style=\"color:white\">Annika<\/p2>"
+          }
+        },
+        "1e3cb94a-24b8-4086-a4b6-eb9c5052a7ab": {
+          "type": "testimonial",
+          "settings": {
+            "descr": "<p2 style=\"color:white\">This is the best cup ever! I have tried other cups but this is by far the best! It is super easy to use and I have had no leaking.<\/p2>",
+            "author": "<p2 style=\"color:white\">Sadie<\/p2>"
+          }
+        }
+      },
+      "block_order": [
+        "183e266f-e1f8-49f8-a8bc-d2ee4e476bb4",
+        "80843bb4-7351-46da-a31f-2436b30bace3",
+        "1e3cb94a-24b8-4086-a4b6-eb9c5052a7ab"
+      ],
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/TF_-_Testimonials_4.png",
+        "top_image": "shopify:\/\/shop_images\/Quotations-01.png"
+      }
+    },
+    "introduction": {
+      "type": "section-introduction",
+      "blocks": {
+        "c27f9c58-fdc0-45ab-9864-40f947fb1740": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Chat-svg.png",
+            "title": "live Chat",
+            "link": "https:\/\/v2.zopim.com\/widget\/popout.html?key=DibbXUebfGYfJpmOpguVy6hmJcM7vDqc"
+          }
+        },
+        "1e90c639-72dc-45b8-8cbd-e1071c839ccc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Text-svg.png",
+            "title": "Text Us",
+            "link": "sms:\/\/+18552158426"
+          }
+        },
+        "6584d8aa-7f23-4237-b378-61ae65b5eb66": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Email-svg.png",
+            "title": "Email US",
+            "link": "mailto:sayhey@saalt.com"
+          }
+        }
+      },
+      "block_order": [
+        "c27f9c58-fdc0-45ab-9864-40f947fb1740",
+        "1e90c639-72dc-45b8-8cbd-e1071c839ccc",
+        "6584d8aa-7f23-4237-b378-61ae65b5eb66"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Saalt_Period_Care_Monogram_c5da906f-f84a-477a-b6d0-07270522fa89.png",
+        "title": "We're here to get you to period bliss.",
+        "description": "If you're not happy with your Saalt product, we'll send you a replacement you'll love or your money back per our Period Bliss Guarantee.",
+        "subtitle": "Reach out to our Saalt Coaches"
+      }
+    }
+  },
+  "order": [
+    "163226280058b695d2",
+    "163226457570b9cb76",
+    "16322626175acf3fc1",
+    "1632265076eca50c30",
+    "16322636962779ecfe",
+    "1632263980dacfc841",
+    "image_with_text",
+    "163226514682c1acff",
+    "16322640141b26929a",
+    "1632264011b6208758",
+    "icon_banner",
+    "16322674197397eae0",
+    "1632268403fca9d224",
+    "testimonials",
+    "introduction"
+  ]
+}

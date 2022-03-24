@@ -1,0 +1,161 @@
+{%- capture flickity_options -%}
+{
+  "prevNextButtons": false,
+  "setGallerySize":true,
+  "adaptiveHeight":true,
+  "wrapAround": true,
+  "dragThreshold": 15,
+  "pauseAutoPlayOnHover": false,
+  "autoPlay": {% if section.settings.autoplay %}{{ section.settings.cycle_speed | times: 1000 }}{% else %}false{% endif %},
+  "pageDots": false
+}
+{%- endcapture -%}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="slideshow">
+  <div class="Slideshow">
+    <div class="Slideshow__Carousel Carousel Carousel--fadeIn Carousel--insideDots" data-flickity-config='{{ flickity_options }}'>
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          <div class="slideshow-slide Slideshow__Slide Carousel__Cell {% if forloop.first %}is-selected{% endif %}" {% if forloop.first %}style="visibility: visible"{% endif %} data-slide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            <div class="slideshow-image Slideshow__ImageContainer AspectRatio AspectRatio--withFallback hidden-phone" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%; --aspect-ratio: {{ block.settings.image.aspect_ratio }}; background-image: url({{ block.settings.image | img_url: '1x1', format: 'jpg' }})">
+              {% assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+
+              <img class="Slideshow__Image Image--lazyLoad hide-no-js"
+                   data-src="{{ image_url }}"
+                   data-optimumx="1.2"
+                   data-widths="[600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200]"
+                   data-sizes="auto"
+                   alt="{{ block.settings.image.alt | escape }}">
+
+              <noscript>
+                <img class="Slideshow__Image" src="{{ block.settings.image | img_url: '1000x' }}" alt="{{ block.settings.image.alt | escape }}">
+              </noscript>
+            </div>
+
+            {%- assign mobile_image = block.settings.mobile_image | default: block.settings.image -%}
+            <div class="Slideshow__ImageContainer AspectRatio hidden-tablet-and-up" style="--aspect-ratio: {{ mobile_image.aspect_ratio }}; background-image: url({{ mobile_image | img_url: '1x1', format: 'jpg' }})">
+              <img class="Slideshow__Image Image--lazyLoad"
+                    src="{{ mobile_image | img_url: '1x1' }}"
+                    data-src="{{ mobile_image | img_url: 'x800' }}"
+                    alt="{{ mobile_image.alt | escape }}">
+
+              <noscript>
+                <img class="Slideshow__Image" src="{{ mobile_image | img_url: 'x800' }}" alt="{{ mobile_image.alt | escape }}">
+              </noscript>
+            </div>
+
+            <div class="slideshow-content">
+              <h1 class="slideshow-title">{{ block.settings.title }}</h1>
+              <div class="slideshow-description">{{ block.settings.subheading }}</div>
+              <div class="slideshow-buttons-wrapper">
+                {% if block.settings.button_1_text != blank %}
+                <a href="{{ block.settings.button_1_link }}" class="slideshow-btn btn btn-primary">{{ block.settings.button_1_text }}</a>
+                {% endif %}
+                {% if block.settings.button_2_text != blank %}
+                <a href="{{ block.settings.button_2_link }}" class="slideshow-btn btn btn-transparent">{{ block.settings.button_2_text }}</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Slideshow 2",
+    "class": "homepage--slideshow",
+    "max_blocks": 5,
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Auto rotate between slides",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "cycle_speed",
+        "min": 3,
+        "max": 8,
+        "step": 1,
+        "unit": "sec",
+        "label": "Change slides every",
+        "default": 5
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Sub-heading"
+          },
+          {
+            "type": "header",
+            "content": "Button 1"
+          },
+          {
+            "type": "text",
+            "id": "button_1_text",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "button_1_link",
+            "label": "Link"
+          },
+          {
+            "type": "header",
+            "content": "Button 2"
+          },
+          {
+            "type": "text",
+            "id": "button_2_text",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "button_2_link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "Image",
+        "name": "Slideshow 2",
+        "settings": {},
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
